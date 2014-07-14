@@ -1,0 +1,823 @@
+/*
+Theme Name: safari
+Theme URI: http://themekraft.com/tk/
+Author: ThemeKraft
+Author URI: http://themekraft.com/
+Description: Hi, I am the ultra minimal starter theme safari, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
+Version: 1.1.2
+License: GNU General Public License
+License URI: see license.txt
+Tags: coffee, nightshift
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
+the _s starter theme from Automattic, the guys behind WordPress.
+
+_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Twitter Bootstrap
+
+
+*/
+
+/* Import the necessary TK Bootstrap WP CSS additions */
+@import url( includes/css/bootstrap-wp.css );
+
+
+/* ==========================================================================
+   Column & Row Setup
+   ========================================================================== */
+
+.col {
+    display: block;
+    float:left;
+    margin: 0 0 0 1.6%;
+}
+
+/* Remove the margin on the first column. Works on all browsers incl. IE7+ */
+.col:first-child { margin-left: 0; }
+
+.row {
+    clear: both;
+    margin: 0 auto;
+    *zoom: 1;
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after { clear: both; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+/* My Minimal WordPress Styling comes here */
+
+/* This is a small security for too long strings titles */
+body {
+    word-wrap: break-word;
+    margin:0;
+}
+
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+ul{
+    padding-left:0;
+}
+
+/* Alignment */
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+img[class*="wp-image-"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.wp-caption {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+.wp-caption.aligncenter {
+    margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+}
+.wp-caption .wp-caption-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+    margin-bottom: 1.5em;
+}
+.gallery a img {
+    border: none;
+    height: auto;
+    max-width: 90%;
+}
+.gallery dd {
+    margin: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.main-content-inner {
+    padding-bottom: 1.5em;
+}
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.container{
+    padding:15px 0;
+}
+
+.header-container{
+    max-width:1140px;
+    margin:0 auto;
+}
+
+
+/* Clearing */
+.clear {
+    clear: both;
+}
+
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: 2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.widget_search .search-form input[type="submit"] { display: none; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+    max-width: 100%;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+.comment .children { margin-left: 1.5em; }
+
+/*
+ == Quick CSS styling tips ==
+
+ You can start off in a rough direction with some minimal styles.
+ See below for some tips. ;)
+
+
+ == Want to have the whole site wrapped? ==
+
+ Just fill the .container class with some background color to have a the whole site "wrapped".
+ This works so easy because every main part is wrapped only once into a container class by bootstrap.
+ Try out by decommenting the next line and go from there.
+
+ .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+
+ == Want to wrap just the content and sidebar in Bootstrap style? ==
+
+ That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
+
+
+ == Infinite Scrolling by Jetpack ==
+ You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html..
+
+/* Globally hidden elements when Infinite Scroll is supported and in use.
+ * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
+
+/*
+.infinite-scroll .page-links,
+.infinite-scroll.neverending .site-footer {
+        display: none;
+}
+*/
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
+/*
+.infinity-end.neverending .site-footer {
+        display: block;
+}
+*/
+
+/* Hey, if you don't need my comments anymore, just delete me! :)  */
+
+.slider-wrapper .flex-caption{
+    padding: 10px;
+    margin-bottom: 0;
+    position: absolute;
+    right: auto;
+    color: #fafafa;
+    font-size: 13px;
+    line-height: 18px;
+    height: auto;
+    border-radius: 10px;
+    width:100%;
+    top: 20%; 
+}
+
+#main-slider .slider-text-container {
+    width: 90%;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    padding: 20px; 
+}
+
+.flex-caption p{
+    font-size:20px;
+}
+
+.flex-caption h2{
+    font-size:50px;
+    margin:20px 0;
+    color:#fff;
+}
+
+.flex-caption .slider-button{
+    background:#009cee;
+    padding:10px 30px;
+    border-radius:3px;
+    color:#fff;
+    font-size:16px;
+    display:inline-block;
+}
+
+.flex-caption .slider-button:hover{
+    color:#333;
+}
+.slider-wrapper .flex-caption h2 a{
+    color:#fff;
+}
+
+.business-tagline-area .business-tagline{
+    padding: 60px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.business-tagline h3{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.business-tagline p{
+    font-size: 20px; 
+    text-align:center;
+}
+
+
+.home-featured{
+    padding: 80px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.home-featured:after{
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0px;
+}
+
+.home-featured .col:nth-of-type(4n+1){
+    margin-left:0;
+}
+
+.home-featured .home-featured-one,
+.home-featured .home-featured-two,
+.home-featured .home-featured-three,
+.home-featured .home-featured-four {
+    padding-bottom: 20px;
+}
+
+.home-featured h3{
+    font-size:26px;
+    margin:10px 0;
+    text-align:center;
+    font-style: inherit; 
+}
+
+.home-featured .featured-image{
+    text-align:center;
+}
+
+.home-featured img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    padding: 10px;
+    float:left;
+    background:#3B3939;
+}
+
+.home-featured p{
+    margin: 0 12px 20px;
+}
+
+.home-featured .read-more {
+    background: #009cee;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+
+.home-featured .read-more:hover {
+    background: #111 !important;
+}
+
+/* Team Members */
+
+.section-title {
+    margin: 0 auto !important;
+    padding: 50px 0 10px;
+    max-width: 1140px;
+    text-align: center;
+}
+
+.section-title h3 {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.team-member-area{
+    background:#009cee;
+}
+.team-member-area h3,
+.home-portfolio-title h3,
+.home-portfolio-title p{
+    color:#fff;
+}
+
+.team-member-area p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.team-member-title p{
+    color:#fff;
+}
+
+.home-featured-team{
+    margin-bottom:20px !important;
+}
+.featured-team-content p {
+    font-size:16px;
+}
+.team-member-area h3{
+    margin:0;
+}
+.home-team-member-title {
+    margin: 25px 0 0; 
+    color:#fff;
+}
+
+.home-team-member-title a{
+    color:#fff;
+}
+.featured-team-content .team-member-role {
+    margin: 5px 0 15px; 
+    color:#fff;
+}
+
+.members-wrap{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 0 50px 0;
+}
+
+.members-wrap .featured-team-content{
+    text-align:center;
+}
+
+.team-meta{
+    text-align:center;
+    padding-bottom: 20px; 
+}
+
+.team-meta li{
+    margin: 0 2px;
+}
+
+.team-meta li.twitter,
+.team-meta li.facebook{
+    display:inline-block;
+}
+
+.team-meta li a:before{
+    width: 34px;
+    padding: 6px 10px;
+    color: #111;
+    font-family:"FontAwesome";
+    display:inline-block;
+    background:#fff;
+    border:1px solid #111;
+}
+
+.team-meta li:hover a:before{
+    background:#111;
+    color:#fff;
+}
+.team-meta li a[href*="facebook.com"]::before {
+    content: '\f09a';
+}
+
+.team-meta li a[href*="twitter.com"]::before {
+    content: '\f099';
+}
+
+.team-meta span{
+    display:inline-block;
+    text-indent:-9999px;
+    width:0;
+}
+
+.team-member-image{
+    text-align:center;
+}
+
+.team-member-image .avatar{
+    margin-bottom:10px;
+}
+
+.team-member-buttons{
+    text-align:center;
+}
+
+.team-member-buttons a{
+    border: solid 3px #111;
+    padding: 10px;
+    display: inline-block;
+    letter-spacing: 1.3;
+    font-size: 15px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+.team-member-buttons a:hover{
+    background:#009cee;
+    color:#fff;
+    border:solid 3px #009cee;
+}
+
+
+
+/* ================================
+* Featured posts on front page 
+================================== */
+
+.home-post-title{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.home-post-title h3 {
+    text-align: center;
+    font-size: 40px;
+    color: #111;
+}
+
+#featured-posts-container {
+    max-width: 1140px;
+    padding: 80px 0 40px;
+}
+
+.featured-section-title {
+    color: #333; 
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom:10px;
+    letter-spacing: 1px; 
+    margin-bottom: 20px;
+    margin-top: 0; 
+}
+
+#featured-posts .post-meta {
+    display: block;
+    margin-bottom: 10px; 
+    margin-top:10px;
+}
+#featured-posts .hentry
+{
+    margin-left:0px;
+    padding-bottom: 20px; 
+}
+.home-featured-post:nth-of-type(3n+1) {
+    margin-left: 0;
+}
+
+.home-featured-post {
+    min-height: 430px; 
+    margin-bottom: 20px;
+    color: #111; 
+}
+.featured-post-content {
+    position: relative; 
+    border-bottom:1px solid #ddd;
+}
+
+.home-featured-post-title {
+    font-size: 20px; 
+    margin-bottom:10px; 
+    font-weight:300;    
+}
+
+.post-content p{
+    margin-bottom: 20px;
+}
+.feature-more-link {
+    background: #009cee; 
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    font-weight: 300;
+    font-size: 14px; 
+    letter-spacing: 1px;
+    padding: 10px 15px; 
+    color: #fff;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -khtml-transition: all 0.5s ease;
+    -moz-transitiokn: all 0.5s ease;
+}
+
+.feature-more-link:hover {
+    opacity: 1; 
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -khtml-transition: all 0.5s ease;
+    -moz-transitiokn: all 0.5s ease;
+}
+
+/* Home Counter */
+
+.home-counter-area{
+    background:url('includes/images/slider2.jpg');    
+}
+.home-counter{
+    padding:80px 0;
+}
+
+.counter{
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    padding: 50px 0;
+    margin-left:120px;
+}
+
+.counter:first-child{
+    margin-left:0;
+}
+
+
+/* Main Navigation */
+
+
+.navbar{
+    margin:22px 0;
+}
+
+.main-navigation {
+    text-align: left; 
+    margin: 40px 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -khtml-transition: all 0.3s ease;
+    -moz-transitiokn: all 0.3s ease;
+}
+
+.main-navigation h1 {
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.nav-menu {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 1px; 
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li {
+    float: left;
+    position: relative;
+    margin: 0 0 0 20px; /* Margin on the left side of each top level menu item (since it's floated right) */
+}
+
+.main-navigation li:first-child {
+    margin: 0;
+}
+
+.main-navigation ul ul li {
+    margin: 0;
+}
+
+.main-navigation li.menu-parent-item > a:after { /* If you don't want the arrows on the top level drop down, simply remove this style */
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    vertical-align: middle;
+    font-size: 9px;
+    content: " \f078";
+}
+
+.main-navigation ul li li.menu-parent-item > a:after { /* If you don't want the arrows on the sub-menu options, simply remove this style */
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    vertical-align: middle;
+    font-size: 9px;
+    content: " \f054";
+}
+
+.main-navigation ul a {
+    padding: 10px;
+}
+
+.main-navigation ul a:hover{
+    color:#333;
+}
+.main-navigation ul ul a {
+    padding: 10px; /* Padding around each dropdown menu option */
+}
+
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+}
+
+.main-small-navigation a
+{
+    display: block;
+    text-decoration: none;
+    color: #009cee;
+}
+
+.main-small-navigation a:hover
+{
+    color:#333;
+}
+.main-navigation ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 99999;
+    line-height: 1.7;
+    background-color: #009cee; /* Nav bar dropdown background color */
+}
+
+.main-navigation ul ul a
+{
+    color:#fff;
+}
+.main-navigation ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.main-navigation ul ul a {
+    color: #fff; /* Nav bar dropdown link color */
+    width: 200px; /* Nav bar dropdown width */
+}
+
+.main-navigation ul ul li {
+}
+
+
+.main-navigation ul ul :hover > a {
+    color: #333; /* Nav bar dropdown level 2 link color on level 3 hover */
+    background-color: #fff; /* Nav bar dropdown link background color on hover */
+}
+
+.main-navigation ul ul a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0);
+    opacity: 0.7;
+}
+
+.main-navigation ul li:hover > ul {
+    display: block;
+}
+
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a {
+    color: #333; /* Nav bar link color for current menu item or ancestor */
+}
+
+.main-navigation ul .divider {
+    border-bottom: 1px solid #aaa;
+    height: 0;
+    line-height: 0.0625;
+    overflow: hidden;
+}
+
+.main-navigation ul li.dropdown-header a,
+.main-navigation ul li.current-menu-item ul .dropdown-header a {
+    color: #aaa; /* Nav bar dropdown header color */
+    background-color: #333; /* Nav bar dropdown header background color */
+}
+
+/* Small menu toggle for mobile devices */
+.menu-toggle {
+    cursor: pointer;
+    color:#fff;
+}
+
+.main-small-navigation .nav-menu {
+    display: none;
+}
+
+.main-navigation li ul li a {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    display: block;
+    font-size: 14px;
+    line-height: 2;
+    padding: 12px 10px;
+    white-space: normal;
+    color: #fff;
+}
