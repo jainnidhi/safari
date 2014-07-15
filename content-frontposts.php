@@ -33,6 +33,12 @@ if (get_theme_mod('safari_front_featured_posts_check')) {
                  <?php if ( get_theme_mod('safari_post_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('safari_post_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Recent Blogs', 'safari') ?></h3>
                            <?php } ?>
+                  
+                   <?php if ( get_theme_mod('post_description') !='' ) {  ?>
+                            <p><?php echo esc_html(get_theme_mod('post_description')); ?></p>
+                                     <?php } else { ?>
+                                    <p><?php esc_html_e('Post Description Block.', 'safari') ?> </p>
+                                            <?php } ?>
             </div>
         </div>
     <div id="front-featured-posts">

@@ -311,6 +311,10 @@ object {
     color:#fff;
 }
 
+.flex-control-nav{
+    z-index:10;
+}
+
 .business-tagline-area .business-tagline{
     padding: 60px 0;
     max-width: 1140px;
@@ -356,8 +360,7 @@ object {
 
 .home-featured h3{
     font-size:26px;
-    margin:10px 0;
-    text-align:center;
+    margin:0px 0 20px;
     font-style: inherit; 
 }
 
@@ -372,10 +375,11 @@ object {
     padding: 10px;
     float:left;
     background:#3B3939;
+    margin-right:10px;
 }
 
 .home-featured p{
-    margin: 0 12px 20px;
+    margin: 0 0px 20px;
 }
 
 .home-featured .read-more {
@@ -404,21 +408,9 @@ object {
     margin-bottom: 0;
 }
 
-.team-member-area{
-    background:#009cee;
-}
-.team-member-area h3,
-.home-portfolio-title h3,
-.home-portfolio-title p{
-    color:#fff;
-}
-
 .team-member-area p {
     font-size: 20px;
     margin: 20px 0;
-}
-.team-member-title p{
-    color:#fff;
 }
 
 .home-featured-team{
@@ -432,15 +424,10 @@ object {
 }
 .home-team-member-title {
     margin: 25px 0 0; 
-    color:#fff;
 }
 
-.home-team-member-title a{
-    color:#fff;
-}
 .featured-team-content .team-member-role {
     margin: 5px 0 15px; 
-    color:#fff;
 }
 
 .members-wrap{
@@ -541,6 +528,12 @@ object {
     color: #111;
 }
 
+.home-post-title p{
+    font-size:20px;
+    margin:20px 0;
+    text-align:center;
+}
+
 #featured-posts-container {
     max-width: 1140px;
     padding: 80px 0 40px;
@@ -631,13 +624,102 @@ object {
     width: 200px;
     height: 200px;
     padding: 50px 0;
-    margin-left:120px;
 }
 
-.counter:first-child{
-    margin-left:0;
+.testimonial-slider{
+    background:url('includes/images/slider1.jpg');
+}
+.testimonial-slider .flex-control-nav{
+    display:none;
+}
+#reviewslider{
+    border-radius:0px;
+    box-shadow:none;
+    padding:80px 30px;
+    background:none;
+    margin:0 auto 60px;
 }
 
+#reviewslider .slides{
+    background:none;
+}
+
+#reviewslider .slides img{
+    width:150px;
+    border-radius: 100px;
+    height: 150px;
+    padding: 2px;
+    border: 3px solid #009cee;
+    opacity:1;
+    margin: 0 auto 20px;
+}
+
+#reviewslider .flex-caption{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    position: relative;
+    padding: 20px;
+    min-height: 130px;
+}
+
+#reviewslider .flex-caption p{
+    font-size:16px;
+    color: #fff; 
+    margin:20px 0;
+    text-align:center;
+}
+
+.client-name{
+    text-align:center;
+}
+
+.client-name a{
+    color:#009cee;
+    font-size:20px;
+    font-weight:700;
+}
+#reviewslider .flex-control-nav li a{
+    width:10px;
+    height:10px;
+}
+
+#reviewslider .flex-control-nav{
+    position:relative;
+    bottom:-10px;
+}
+
+.testimonial-slider .flexslider .flex-prev{
+    left:10px;
+    opacity:1;
+}
+.testimonial-slider .flexslider .flex-next{
+    right:10px;
+    opacity:1;
+}
+
+.flexslider:hover .flex-prev {
+    left: 10px !important;
+}
+
+.flexslider:hover .flex-next{
+    right:10px !important;
+}
+
+.flex-direction-nav a.flex-prev:before {
+    content: '\f104' !important;
+}
+
+.flex-direction-nav a.flex-next:before {
+    content: '\f105' !important;
+}
+
+.flex-direction-nav a{
+    background: #111;
+    padding: 0px 12px;
+    width: 45px;
+    height: 50px;
+}
 
 /* Main Navigation */
 
@@ -820,4 +902,17 @@ object {
     padding: 12px 10px;
     white-space: normal;
     color: #fff;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 10px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 24px;
+    padding: 0.8em;
+    display: none;
+    cursor: pointer;
 }

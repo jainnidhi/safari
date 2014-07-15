@@ -1402,64 +1402,14 @@ function safari_customize_register($wp_customize) {
         ),
             )
     );
+       
         
-            // Add new section for Home Contact Title settings
-    $wp_customize->add_section('feedback_title_setting', array(
-        'title' => __('Testimonial Title', 'safari'),
-        'priority' => 62,
-    ));
-    
-    // home Title
-        $wp_customize->add_setting('feedback_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'transport'=> 'postMessage',
-            ));
-        
-        $wp_customize->add_control('feedback_title', array(
-            'label' => __('Section Title', 'safari'),
-            'section' => 'feedback_title_setting',
-            'settings' => 'feedback_title',
-            'priority' => 1,
-           
-        ));
-        
-        // home Title
-        $wp_customize->add_setting('feedback_menu_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'transport'=> 'postMessage',
-            ));
-        
-        $wp_customize->add_control('feedback_menu_title', array(
-            'label' => __('Menu Title', 'safari'),
-            'section' => 'feedback_title_setting',
-            'settings' => 'feedback_menu_title',
-            'priority' => 2,
-           
-        ));
-        
-        
-        // Add new section for Testimonial slider settings
+      // Add new section for Testimonial slider settings
     $wp_customize->add_section('testimonial_slider_setting', array(
         'title' => __('Testimonial Slider', 'safari'),
-        'priority' => 63,
+        'priority' => 57,
     ));
 
-    $wp_customize->add_setting('tslider_one', array(
-        'transport'=> 'postMessage',
-    ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_one', array(
-        'label' => 'Slider 1',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_one',
-                 'priority' => 1,
-     
-                )
-            )
-    );
-    
         
         $wp_customize->add_setting('tslider_one_description', array('default' => '',
             'transport'=> 'postMessage',
@@ -1472,22 +1422,32 @@ function safari_customize_register($wp_customize) {
             'priority' => 2,
         )));
         
-        
-        $wp_customize->add_setting('tslider_two', array(
+        $wp_customize->add_setting('client_name_one', array(
+            'sanitize_callback' => 'sanitize_text_field',
             'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_one', array(
+            'label' => __('Client Name', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_one',
+            'priority' => 3,
+           
         ));
-
-    $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_two', array(
-        'label' => 'Slider 2',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_two',
-                 'priority' => 3,
-     
-                )
-            )
-    );
+        
+        $wp_customize->add_setting('client_name_url_one', array('default' => __('', 'safari'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_url_one', array(
+            'label' => __('URL', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_url_one',
+            'priority' => 4,
+            
+        ));
+      
     
         $wp_customize->add_setting('tslider_two_description', array('default' => '',
             'transport'=> 'postMessage',
@@ -1497,25 +1457,36 @@ function safari_customize_register($wp_customize) {
             'label' => __('Description', 'safari'),
             'section' => 'testimonial_slider_setting',
             'settings' => 'tslider_two_description',
-            'priority' => 4,
+            'priority' => 6,
         )));
         
-         $wp_customize->add_setting('tslider_three', array(
-             'transport'=> 'postMessage',
-         ));
+        $wp_customize->add_setting('client_name_two', array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
         
-        $wp_customize->add_control(
-            new WP_Customize_Image_Control(
-            $wp_customize, 'tslider_three', array(
-        'label' => 'Slider 3',
-        'section' => 'testimonial_slider_setting',
-        'settings' => 'tslider_three',
-                 'priority' => 5,
+        $wp_customize->add_control('client_name_two', array(
+            'label' => __('Client Name', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_two',
+            'priority' => 7,
+           
+        ));
+        
+        $wp_customize->add_setting('client_name_url_two', array('default' => __('', 'safari'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_url_two', array(
+            'label' => __('URL', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_url_two',
+            'priority' => 8,
+            
+        ));
+        
      
-                )
-            )
-    );
-    
         $wp_customize->add_setting('tslider_three_description', array('default' => '',
             'transport'=> 'postMessage',
             ));
@@ -1524,8 +1495,110 @@ function safari_customize_register($wp_customize) {
             'label' => __('Description', 'safari'),
             'section' => 'testimonial_slider_setting',
             'settings' => 'tslider_three_description',
-            'priority' => 6,
+            'priority' => 10,
         )));
+        
+        $wp_customize->add_setting('client_name_three', array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_three', array(
+            'label' => __('Client Name', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_three',
+            'priority' => 11,
+           
+        ));
+        
+        $wp_customize->add_setting('client_name_url_three', array('default' => __('', 'safari'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_url_three', array(
+            'label' => __('URL', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_url_three',
+            'priority' => 12,
+            
+        ));
+       
+    
+        $wp_customize->add_setting('tslider_four_description', array('default' => '',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'tslider_four_description', array(
+            'label' => __('Description', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'tslider_four_description',
+            'priority' => 14,
+        )));
+        
+        $wp_customize->add_setting('client_name_four', array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_four', array(
+            'label' => __('Client Name', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_four',
+            'priority' => 15,
+           
+        ));
+        
+        $wp_customize->add_setting('client_name_url_four', array('default' => __('', 'safari'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_url_four', array(
+            'label' => __('URL', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_url_four',
+            'priority' => 16,
+            
+        ));
+      
+    
+        $wp_customize->add_setting('tslider_five_description', array('default' => '',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'tslider_five_description', array(
+            'label' => __('Description', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'tslider_five_description',
+            'priority' => 18,
+        )));
+        
+        $wp_customize->add_setting('client_name_five', array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_five', array(
+            'label' => __('Client Name', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_five',
+            'priority' => 19,
+           
+        ));
+        
+        $wp_customize->add_setting('client_name_url_five', array('default' => __('', 'safari'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('client_name_url_five', array(
+            'label' => __('URL', 'safari'),
+            'section' => 'testimonial_slider_setting',
+            'settings' => 'client_name_url_five',
+            'priority' => 20,
+            
+        ));
         
 
      // Add footer text section

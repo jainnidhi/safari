@@ -285,7 +285,7 @@ get_header();
                   <?php if ( get_theme_mod('home_description_two') !='' ) {  ?>
                   <p><?php echo esc_html(get_theme_mod('home_description_two')); ?></p>
                            <?php } else { ?>
-                          <p><?php esc_html_e('Show your multiple services that will explore your website among the audience.', 'safari') ?> </p>
+                          <p><?php esc_html_e('Show your services that will explore your website among the audience.', 'safari') ?> </p>
                                            <?php } ?>
 
                       <a class="read-more" href="<?php if ( get_theme_mod('home_two_link_url') !='' ) { echo esc_url(get_theme_mod('home_two_link_url')); } ?>">
@@ -355,7 +355,8 @@ get_header();
         <div class="container">
                 <div class="row">
             <div class="home-counter col-sm-12">
-                <div class="home-counter-one counter col-sm-3">
+                <div class="home-counter-one col-sm-3">
+                    <div class="counter">
                            <?php if ( get_theme_mod('counter_title_one') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_one')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('568', 'safari') ?></h3>
                            <?php } ?>
@@ -365,9 +366,11 @@ get_header();
                            <?php } else { ?>
                           <p><?php esc_html_e('Clients.', 'safari') ?> </p>
                                            <?php } ?>
+                    </div>
                 </div>
 
-                <div class="home-counter-two counter col-sm-3">
+                <div class="home-counter-two col-sm-3">
+                    <div class="counter">
                            <?php if ( get_theme_mod('counter_title_two') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_two')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('862', 'safari') ?></h3>
                            <?php } ?>
@@ -377,11 +380,12 @@ get_header();
                            <?php } else { ?>
                           <p><?php esc_html_e('Projects', 'safari') ?> </p>
                                            <?php } ?>
+                    </div>
                 </div>
 
 
-                <div class="home-counter-three counter col-sm-3">
-                  
+                <div class="home-counter-three col-sm-3">
+                  <div class="counter">
                            <?php if ( get_theme_mod('counter_title_three') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_three')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('243', 'safari') ?></h3>
                            <?php } ?>
@@ -391,10 +395,11 @@ get_header();
                            <?php } else { ?>
                           <p><?php esc_html_e('Posts', 'safari') ?> </p>
                                            <?php } ?>
+                  </div>
                 </div>
                 
-                <div class="home-counter-four counter col-sm-3">
-                 
+                <div class="home-counter-four col-sm-3">
+                    <div class="counter">
                            <?php if ( get_theme_mod('counter_title_four') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_four')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('243', 'safari') ?></h3>
                            <?php } ?>
@@ -404,7 +409,7 @@ get_header();
                            <?php } else { ?>
                           <p><?php esc_html_e('Templates', 'safari') ?> </p>
                                            <?php } ?>
-
+                    </div>
                 </div>
             </div>
           </div><!-- /.row -->
@@ -414,7 +419,171 @@ get_header();
  
         
         <?php
-            get_template_part('content', 'frontteam');
+            get_template_part('content', 'frontteam'); ?>
+     
+     <!-- Home testimonial slider starts here --> 
+        <section class="testimonial-slider">
+            <div class="flexslider container" id="reviewslider">
+               <div class="row">
+                <ul class="slides">
+                    <?php if ( get_theme_mod('tslider_one_description') =='' ) {  ?>
+                        <li id="tslider1">
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'safari') ?> </p>
+                            </div>
+                            <div class="client-name">
+                                 <a class="client" href="#">
+                                    <?php esc_html_e('-John', 'safari') ?>
+                                </a>
+                            </div>
+                       </div>
+                    </li>
+                    
+                    <li id="tslider2">
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                               <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'safari') ?> </p>                  
+                            </div>
+                            <div class="client-name">
+                                 <a class="client" href="#">
+                                    <?php esc_html_e('-John', 'safari') ?>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                     <li id="tslider3">
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'safari') ?> </p>
+                            </div>
+                            <div class="client-name">
+                                 <a class="client" href="#">
+                                    <?php esc_html_e('-John', 'safari') ?>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li id="tslider4">
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'safari') ?> </p>
+                            </div>
+                            <div class="client-name">
+                                 <a class="client" href="#">
+                                    <?php esc_html_e('-John', 'safari') ?>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li id="tslider5">
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'safari') ?> </p>
+                            </div>
+                            <div class="client-name">
+                                 <a class="client" href="#">
+                                    <?php esc_html_e('-John', 'safari') ?>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <?php } ?>
+                    
+                     <?php if ( get_theme_mod('tslider_one_description') !='' ) {  ?>
+                    <li id="tslider1">
+                      <?php if (get_theme_mod('client_name_url_one') !='' || get_theme_mod('client_name_one') !='' ) {  ?>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <?php echo wpautop(esc_html(get_theme_mod('tslider_one_description'))); ?>
+                            </div>
+                            <div class="client-name">
+                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_one')); ?>">
+                                     <?php echo esc_html(get_theme_mod('client_name_one')); ?>
+                                 </a>
+                            </div>
+                       </div>
+                      <?php } ?>
+                    </li>
+                    
+                    <?php if ( get_theme_mod('tslider_two_description') !='' ) {  ?>
+                    <li id="tslider2">
+                     <?php if ( get_theme_mod('client_name_url_two') !='' || get_theme_mod('client_name_two') !='' ) {  ?>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <?php echo wpautop(esc_html(get_theme_mod('tslider_two_description'))); ?>
+                            </div>
+                            <div class="client-name">
+                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_two')); ?>">
+                                     <?php echo esc_html(get_theme_mod('client_name_two')); ?>
+                                 </a>
+                            </div>
+                        </div>
+                     <?php } ?>
+                    </li>
+                    <?php } ?>
+                    
+                     <?php if ( get_theme_mod('tslider_three_description') !='' ) {  ?>
+                     <li id="tslider3"> 
+                     <?php if (get_theme_mod('client_name_url_three') !='' || get_theme_mod('client_name_three') !='' ) {  ?>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <?php echo wpautop(esc_html(get_theme_mod('tslider_three_description'))); ?>
+                            </div>
+                            <div class="client-name">
+                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_three')); ?>">
+                                     <?php echo esc_html(get_theme_mod('client_name_three')); ?>
+                                 </a>
+                            </div>
+                         </div>
+                     <?php } ?>
+                    </li>
+                     <?php } ?>
+                    
+                     <?php if ( get_theme_mod('tslider_four_description') !='' ) {  ?>
+                     <li id="tslider4"> 
+                      <?php if ( get_theme_mod('client_name_url_four') !='' || get_theme_mod('client_name_four') !='' ) {  ?>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <?php echo wpautop(esc_html(get_theme_mod('tslider_four_description'))); ?>
+                            </div>
+                            <div class="client-name">
+                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_four')); ?>">
+                                     <?php echo esc_html(get_theme_mod('client_name_four')); ?>
+                                 </a>
+                            </div>
+                       </div>
+                      <?php } ?>
+                    </li>
+                     <?php } ?>
+                    
+                     <?php if ( get_theme_mod('tslider_five_description') !='' ) {  ?>
+                     <li id="tslider5"> 
+                        <?php if ( get_theme_mod('client_name_url_five') !='' || get_theme_mod('client_name_five') !='' ) {  ?>
+                        <div class="flex-caption">
+                            <div class="client-testimonial">
+                                <?php echo wpautop(esc_html(get_theme_mod('tslider_five_description'))); ?>
+                            </div>
+                            <div class="client-name">
+                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_five')); ?>">
+                                     <?php echo esc_html(get_theme_mod('client_name_five')); ?>
+                                 </a>
+                            </div>
+                         </div>
+                        <?php } ?>
+                    </li>
+                        <?php } ?>
+                 <?php } ?>
+                    
+               </ul>
+               </div><!-- /.row -->
+            </div>
+        </section><!-- /.testimonial-slider -->
+     
+     <?php
             // Display featured posts on front page
             get_template_part('content', 'frontposts'); ?>
        
