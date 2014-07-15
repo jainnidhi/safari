@@ -18,7 +18,7 @@
 get_header();
 ?>
 
-<section class="slider-wrapper">
+<section class="slider-wrapper clearfix">
       <div class="flexslider col-sm-12"  id="main-slider">
         <ul class="slides">
             <?php 
@@ -285,7 +285,7 @@ get_header();
                   <?php if ( get_theme_mod('home_description_two') !='' ) {  ?>
                   <p><?php echo esc_html(get_theme_mod('home_description_two')); ?></p>
                            <?php } else { ?>
-                          <p><?php esc_html_e('Show your services that will explore your website among the audience.', 'safari') ?> </p>
+                          <p><?php esc_html_e('Show your multiple services that will explore your website among the audience.', 'safari') ?> </p>
                                            <?php } ?>
 
                       <a class="read-more" href="<?php if ( get_theme_mod('home_two_link_url') !='' ) { echo esc_url(get_theme_mod('home_two_link_url')); } ?>">
@@ -349,6 +349,8 @@ get_header();
           </div><!-- /.row -->
         </div><!-- /.container -->
      </section><!-- end home featured area -->
+     
+     <?php get_template_part('content','frontportfolio'); ?>
      
      
      <section class="home-counter-area">

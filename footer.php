@@ -18,7 +18,36 @@
 	<div class="container">
 		<div class="row">
 			<div class="site-footer-inner col-sm-12">
+                        <?php
+                                // Count how many footer sidebars are active so we can work out how many containers we need
+                                $footerSidebars = 0;
+                                for ($x = 1; $x <= 4; $x++) {
+                                    if (is_active_sidebar('sidebar-footer' . $x)) {
+                                        $footerSidebars++;
+                                    }
+                                }
 
+                                // If there's one or more one active sidebars, create a row and add them
+                                if ($footerSidebars > 0) {
+                                    ?>
+                                    <footer class="site-footer row" role="contentinfo">
+                                        <?php
+                                        // Work out the container class name based on the number of active footer sidebars
+                                        $containerClass = "col-sm-" . 12 / $footerSidebars;
+
+                                    // Display the active footer sidebars
+                                    for ($x = 1; $x <= 4; $x++) {
+                                        if (is_active_sidebar('sidebar-footer' . $x)) {
+                                            ?>
+                                            <div id="<?php echo 'footer-widget' . $x; ?>" class="<?php echo $containerClass ?>">
+                                                <div class="widget-area" role="complementary">
+                                            <?php dynamic_sidebar('sidebar-footer' . $x); ?>
+                                          </div>
+                                      </div> <!-- /.col.<?php echo $containerClass ?> -->
+                              <?php }
+                          }
+                                }
+                          ?>
 				<div class="site-info">
 					<?php do_action( 'safari_credits' ); ?>
 					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'safari' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'safari' ), 'WordPress' ); ?></a>

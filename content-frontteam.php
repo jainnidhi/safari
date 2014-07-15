@@ -11,12 +11,7 @@
 	
 if (get_theme_mod('safari_front_team_members_check')) {
     $featured_count = intval(get_theme_mod('safari_front_team_members_count'));
-    if (get_theme_mod('safari_team_members_count')) {
-    $grid_count =intval(get_theme_mod('safari_team_members_count'));
-    }
-    else {
-        $grid_count = 3; 
-    }
+   
     $featured_team_args = array(
         'post_type' => 'team-member',
         'posts_per_page' => $featured_count,
@@ -60,8 +55,8 @@ if (get_theme_mod('safari_front_team_members_check')) {
         $facebook                         = esc_attr( get_post_meta( $post->ID, '_facebook', true ) );
         ?>
                     
-                    <?php $containerClass = "grid_" . 12 / $grid_count . "_of_12"; ?>
-                        <div class="home-featured-team col <?php echo $containerClass ?>">
+                  
+                        <div class="home-featured-team col-sm-4">
 
                             <div class="featured-team-content clearfix">
 

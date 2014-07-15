@@ -29,7 +29,7 @@ if (get_theme_mod('safari_front_featured_posts_check')) {
    <div class="container">
        <div class="row">
     <div class="home-post-title-area" id="post-title">
-            <div class="home-post-title">
+            <div class="home-post-title section-title">
                  <?php if ( get_theme_mod('safari_post_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('safari_post_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Recent Blogs', 'safari') ?></h3>
                            <?php } ?>

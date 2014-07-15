@@ -166,7 +166,7 @@ function safari_customize_register($wp_customize) {
     
     // link url
         $wp_customize->add_setting('facebook_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -180,7 +180,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('twitter_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -194,7 +194,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('googleplus_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -208,7 +208,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('pinterest_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -222,7 +222,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('github_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -236,7 +236,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('youtube_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -272,7 +272,7 @@ function safari_customize_register($wp_customize) {
     
     // slider Title
         $wp_customize->add_setting('slider_title_one', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -285,7 +285,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_one_url', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -298,7 +298,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_one_description', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -310,7 +310,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('slider_one_button_one_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -323,7 +323,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_one_button_one_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -335,7 +335,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_one_button_two_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -348,7 +348,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_one_button_two_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -377,7 +377,7 @@ function safari_customize_register($wp_customize) {
     
     // slider Title
         $wp_customize->add_setting('slider_title_two', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -390,7 +390,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_two_url', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -403,7 +403,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_two_description', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -415,7 +415,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('slider_two_button_one_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -428,7 +428,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_two_button_one_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -440,7 +440,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_two_button_two_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -453,7 +453,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_two_button_two_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -483,7 +483,7 @@ function safari_customize_register($wp_customize) {
     
      // slider Title
         $wp_customize->add_setting('slider_title_three', array(
-            'sanitize_callback' => 'sanitize_text_field',
+           'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -496,7 +496,7 @@ function safari_customize_register($wp_customize) {
         ));
         
          $wp_customize->add_setting('slider_three_url', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
              'transport'=> 'postMessage',
             ));
         
@@ -509,7 +509,7 @@ function safari_customize_register($wp_customize) {
         ));
         
        $wp_customize->add_setting('slider_three_description', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
            'transport'=> 'postMessage',
             ));
         
@@ -521,7 +521,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('slider_three_button_one_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -534,7 +534,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_three_button_one_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -546,7 +546,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_three_button_two_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -559,7 +559,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_three_button_two_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -587,7 +587,7 @@ function safari_customize_register($wp_customize) {
     
     // slider Title
         $wp_customize->add_setting('slider_title_four', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -600,7 +600,7 @@ function safari_customize_register($wp_customize) {
         ));
         
          $wp_customize->add_setting('slider_four_url', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
              'transport'=> 'postMessage',
             ));
         
@@ -613,7 +613,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_four_description', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -625,7 +625,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('slider_four_button_one_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -638,7 +638,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_four_button_one_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -650,7 +650,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_four_button_two_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -663,7 +663,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_four_button_two_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -691,7 +691,7 @@ function safari_customize_register($wp_customize) {
     
     // slider Title
         $wp_customize->add_setting('slider_title_five', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -704,7 +704,7 @@ function safari_customize_register($wp_customize) {
         ));
         
          $wp_customize->add_setting('slider_five_url', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
              'transport'=> 'postMessage',
             ));
         
@@ -717,7 +717,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_five_description', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -730,7 +730,7 @@ function safari_customize_register($wp_customize) {
         
         
         $wp_customize->add_setting('slider_five_button_one_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -743,7 +743,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_five_button_one_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -755,7 +755,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('slider_five_button_two_text', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
         ));
 
@@ -768,7 +768,7 @@ function safari_customize_register($wp_customize) {
 
         // link url
         $wp_customize->add_setting('slider_five_button_two_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport' => 'postMessage',
         ));
 
@@ -788,7 +788,7 @@ function safari_customize_register($wp_customize) {
     
     // Tagline Title
         $wp_customize->add_setting('tagline_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -800,7 +800,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('tagline_description', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -812,40 +812,6 @@ function safari_customize_register($wp_customize) {
         )));
         
             
-     // Add new section for Home Featured Title settings
-    $wp_customize->add_section('home_featured_title_setting', array(
-        'title' => __('Home Featured Title', 'safari'),
-        'priority' => 38,
-    ));
-    
-    // home Title
-        $wp_customize->add_setting('home_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'transport'=> 'postMessage',
-            ));
-        
-        $wp_customize->add_control('home_title', array(
-            'label' => __('Section Title', 'safari'),
-            'section' => 'home_featured_title_setting',
-            'settings' => 'home_title',
-            'priority' => 1,
-           
-        ));
-        
-        // home Title
-        $wp_customize->add_setting('home_menu_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'transport'=> 'postMessage',
-            ));
-        
-        $wp_customize->add_control('home_menu_title', array(
-            'label' => __('Menu Title', 'safari'),
-            'section' => 'home_featured_title_setting',
-            'settings' => 'home_menu_title',
-            'priority' => 2,
-           
-        ));
-        
      // Add new section for Home Featured One settings
     $wp_customize->add_section('home_featured_one_setting', array(
         'title' => __('Home Featured #1', 'safari'),
@@ -870,7 +836,7 @@ function safari_customize_register($wp_customize) {
     
     // home Title
         $wp_customize->add_setting('home_title_one', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -883,7 +849,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('home_description_one', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -896,7 +862,7 @@ function safari_customize_register($wp_customize) {
         
          // link text
         $wp_customize->add_setting('home_one_link_text', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -910,7 +876,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('home_one_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -946,7 +912,7 @@ function safari_customize_register($wp_customize) {
     
     // home Title
         $wp_customize->add_setting('home_title_two', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -959,7 +925,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('home_description_two', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -972,7 +938,7 @@ function safari_customize_register($wp_customize) {
         
          // link text
         $wp_customize->add_setting('home_two_link_text', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -986,7 +952,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('home_two_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1024,7 +990,7 @@ function safari_customize_register($wp_customize) {
     
     // home Title
         $wp_customize->add_setting('home_title_three', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1037,7 +1003,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('home_description_three', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+           'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1050,7 +1016,7 @@ function safari_customize_register($wp_customize) {
         
          // link text
         $wp_customize->add_setting('home_three_link_text', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1064,7 +1030,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('home_three_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+           'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1101,7 +1067,7 @@ function safari_customize_register($wp_customize) {
     
     // home Title
         $wp_customize->add_setting('home_title_four', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1114,7 +1080,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('home_description_four', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1127,7 +1093,7 @@ function safari_customize_register($wp_customize) {
         
          // link text
         $wp_customize->add_setting('home_four_link_text', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1141,7 +1107,7 @@ function safari_customize_register($wp_customize) {
         
         // link url
         $wp_customize->add_setting('home_four_link_url', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1153,6 +1119,76 @@ function safari_customize_register($wp_customize) {
             
         ));
         
+        
+                 // Add new section for displaying Featured Portfolio on Front Page
+    $wp_customize->add_section('safari_front_page_portfolio_options', array(
+        'title' => __('Portfolio Settings', 'safari'),
+        'description' => __('Settings for displaying featured portfolio on Front Page', 'safari'),
+        'priority' => 52,
+    ));
+    
+    // enable featured portfolio on front page?
+    $wp_customize->add_setting('safari_front_featured_portfolio_check', array(
+        'default' => 0, 
+        'sanitize_callback' => 'safari_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('safari_front_featured_portfolio_check', array(
+        'label' => __('Show featured portfolio on Front Page', 'safari'),
+        'section' => 'safari_front_page_portfolio_options',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
+    
+    $wp_customize->add_setting('safari_hide_sample_portfolio', array(
+        'default' => 1,
+        'sanitize_callback' => 'safari_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('safari_hide_sample_portfolio', array(
+        'label' => __('Hide sample portfolio on Front Page', 'passion'),
+        'section' => 'safari_front_page_portfolio_options',
+        'priority' => 2,
+        'type' => 'checkbox',
+    ));
+    
+    // portfolio Title
+        $wp_customize->add_setting('safari_portfolio_title', array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('safari_portfolio_title', array(
+            'label' => __('Section Title', 'safari'),
+            'section' => 'safari_front_page_portfolio_options',
+            'settings' => 'safari_portfolio_title',
+            'priority' => 3,
+           
+        ));
+    
+
+    $wp_customize->add_setting('safari_front_featured_portfolio_count', array(
+        'default' => 3,
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'=> 'postMessage',
+    ));
+    $wp_customize->add_control('safari_front_featured_portfolio_count', array(
+        'label' => __('Number of portfolio to display', 'safari'),
+        'section' => 'safari_front_page_portfolio_options',
+        'settings' => 'safari_front_featured_portfolio_count',
+        'priority' => 20,
+    ));
+     
+    
+    $wp_customize->add_setting('safari_portfolio_front_count', array(
+            'default' => 9,
+            'sanitize_callback' => 'safari_sanitize_integer',
+        ));
+        $wp_customize->add_control('safari_portfolio_front_count', array(
+            'label' => __('Portfolio Item Count', 'safari'),
+            'section' => 'safari_front_page_portfolio_options',
+            'settings' => 'safari_portfolio_front_count',
+            'priority' => 40,
+        ));
+        
     
      // Add new section for Counter settings
     $wp_customize->add_section('safari_counter_setting', array(
@@ -1162,7 +1198,7 @@ function safari_customize_register($wp_customize) {
     
     // home Title
         $wp_customize->add_setting('counter_title_one', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1175,7 +1211,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('counter_description_one', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1189,7 +1225,7 @@ function safari_customize_register($wp_customize) {
       
         // Title
         $wp_customize->add_setting('counter_title_two', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1202,7 +1238,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('counter_description_two', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1216,7 +1252,7 @@ function safari_customize_register($wp_customize) {
 
         // Title
         $wp_customize->add_setting('counter_title_three', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1229,7 +1265,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('counter_description_three', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1242,7 +1278,7 @@ function safari_customize_register($wp_customize) {
         
         // Title
         $wp_customize->add_setting('counter_title_four', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1255,7 +1291,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('counter_description_four', array('default' => '',
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1289,7 +1325,7 @@ function safari_customize_register($wp_customize) {
     
     // post Title
         $wp_customize->add_setting('safari_post_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1303,7 +1339,7 @@ function safari_customize_register($wp_customize) {
         
         // post Title
         $wp_customize->add_setting('safari_post_menu_title', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1318,7 +1354,7 @@ function safari_customize_register($wp_customize) {
     // select number of posts for featured posts on front page
     $wp_customize->add_setting('safari_front_featured_posts_count', array(
         'default' => 3,
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport'=> 'postMessage',
     ));
     $wp_customize->add_control('safari_front_featured_posts_count', array(
@@ -1358,7 +1394,7 @@ function safari_customize_register($wp_customize) {
     ));
     
     $wp_customize->add_setting('safari_team_title', array(
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1370,7 +1406,7 @@ function safari_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('team_description', array('default' => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'safari_sanitize_text',
         'transport' => 'postMessage',
     ));
 
@@ -1423,7 +1459,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('client_name_one', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1436,7 +1472,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('client_name_url_one', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1461,7 +1497,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('client_name_two', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1474,7 +1510,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('client_name_url_two', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1499,7 +1535,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('client_name_three', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1512,7 +1548,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('client_name_url_three', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+           'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1537,7 +1573,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('client_name_four', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1550,7 +1586,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('client_name_url_four', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1575,7 +1611,7 @@ function safari_customize_register($wp_customize) {
         )));
         
         $wp_customize->add_setting('client_name_five', array(
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1588,7 +1624,7 @@ function safari_customize_register($wp_customize) {
         ));
         
         $wp_customize->add_setting('client_name_url_five', array('default' => __('', 'safari'),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => 'safari_sanitize_text',
             'transport'=> 'postMessage',
             ));
         
@@ -1656,6 +1692,17 @@ function safari_sanitize_team_member_count_option($grid_count) {
     }
 
     return $grid_count;
+}
+
+/*
+ * 
+ * sanitize Text field
+ * 
+ * @since Safari 1.0
+ * 
+ */
+function safari_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
 }
 
 /*
