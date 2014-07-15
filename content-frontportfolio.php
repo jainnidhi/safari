@@ -31,6 +31,11 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                  <?php if ( get_theme_mod('safari_portfolio_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('safari_portfolio_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Recent Portfolio', 'safari') ?></h3>
                            <?php } ?>
+                  <?php if ( get_theme_mod('portfolio_description') !='' ) {  ?>
+                            <p><?php echo esc_html(get_theme_mod('portfolio_description')); ?></p>
+                                     <?php } else { ?>
+                                    <p><?php esc_html_e('Portfolio description block.', 'safari') ?> </p>
+                                            <?php } ?>
             </div>
     </div>
    
@@ -85,6 +90,7 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
         <div class="home-portfolio-title-area" id="portfolio-title">
             <div class="home-portfolio-title section-title">
                 <h3><?php esc_html_e('Recent Portfolio', 'safari') ?></h3>
+                <p><?php esc_html_e('Portfolio Description Block.', 'safari') ?> </p>
                          
             </div>
     </div>

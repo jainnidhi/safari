@@ -527,7 +527,7 @@ object {
 ================================== */
 
 .home-post-title p{
-    font-size:20px;
+    font-size:13px;
     margin:20px 0;
     text-align:center;
 }
@@ -550,6 +550,8 @@ object {
     display: block;
     margin-bottom: 10px; 
     margin-top:10px;
+    font-size: 12px;
+    color: #999;
 }
 #featured-posts .hentry
 {
