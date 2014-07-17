@@ -93,10 +93,13 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                 <a href="<?php the_permalink(); ?>">
 
                                     <?php the_post_thumbnail('portfolio_feature_thumb'); ?>
+                                    
+                                    
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
 
+                            <span>  
                                 <h4 class="home-featured-portfolio-title">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a>
                                 </h4>
@@ -111,7 +114,8 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                 );
                                 echo wp_list_categories($args_list);
                                 echo '</ul>';
-                                ?>
+                                ?>    
+                           </span>
                             </div><!--end .home-featured-portfolio-->
                    
                         <?php $i+=1; ?>

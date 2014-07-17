@@ -48,17 +48,23 @@
                           }
                                 }
                           ?>
-				<div class="site-info">
-					<?php do_action( 'safari_credits' ); ?>
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'safari' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'safari' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( __( 'Theme: %1$s by %2$s.', 'safari' ), 'safari', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-				</div><!-- close .site-info -->
+				
 
 			</div>
 		</div>
 	</div><!-- close .container -->
 </footer><!-- close #colophon -->
+
+        <div class="site-info">
+            <div class="container">
+                <div class="row">
+                    <?php do_action( 'safari_credits' ); ?>
+                    <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'safari' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'safari' ), 'WordPress' ); ?></a>
+                    <span class="sep"> | </span>
+                    <?php printf( __( 'Theme: %1$s by %2$s.', 'safari' ), 'safari', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+                </div>
+            </div>
+        </div><!-- close .site-info -->
 
 <?php wp_footer(); ?>
 

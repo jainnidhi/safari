@@ -20,10 +20,7 @@ jQuery( document ).ready( function( $ ) {
 
     $( '.widget_rss ul' ).addClass( 'media-list' );
 
-    
-
-    $( '.widget_recent_comments ul#recentcomments' ).css( 'list-style', 'none').css( 'padding-left', '0' );
-    $( '.widget_recent_comments ul#recentcomments li' ).css( 'padding', '5px 15px');
+ 
 
     $( 'table#wp-calendar' ).addClass( 'table table-striped');
 
