@@ -9,10 +9,15 @@
 /* Trigger home page slider and testimonial slider */
 /* Both home page and testimonial slider are powered by FlexSlider by WooThemes */
 jQuery(window).load(function() {
-    jQuery('#main-slider').flexslider();
+    jQuery('#main-slider').flexslider( { 
+        prevText: "<i class='fa fa-angle-left'></i>",
+	nextText: "<i class='fa fa-angle-right'></i>"
+    });
 
     jQuery('#reviewslider').flexslider({
-        animation: "slide"
+        animation: "slide",
+        prevText: "<i class='fa fa-angle-left'></i>",
+	nextText: "<i class='fa fa-angle-right'></i>"
     });
 });
 
@@ -34,12 +39,9 @@ jQuery(document).ready(function() {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
-    })
-});
-
-/* Trigger mobile responsive navigation powered by slicknav.js */
-jQuery(document).ready(function($) {
-
-    $('#site-navigation .menu>ul').slicknav({prependTo: '#mobile-menu'});
-    $('#site-navigation .home-menu>ul').slicknav({prependTo: '#mobile-menu'});
+    });
+    
+    jQuery(function() {
+        jQuery('#featured-portfolio').mixItUp();
+    });
 });

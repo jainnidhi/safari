@@ -37,3 +37,7 @@
  * Try with giving the .container class just a background colour and have a look. ;)
  */
 .container { padding: 0 15px 15px 15px; }
+
+
+/* Flush left and right padding for column classes */
+.flush .col-xs-1, .flush .col-xs-2, .flush .col-xs-3, .flush .col-xs-4, .flush .col-xs-5, .flush .col-xs-6, .flush .col-xs-7, .flush .col-xs-8, .flush .col-xs-9, .flush .col-xs-10, .flush .col-xs-11, .flush .col-xs-12, .flush .col-sm-1, .flush .col-sm-2, .flush .col-sm-3, .flush .col-sm-4, .flush .col-sm-5, .flush .col-sm-6, .flush .col-sm-7, .flush .col-sm-8, .flush .col-sm-9, .flush .col-sm-10, .flush .col-sm-11, .flush .col-sm-12, .flush .col-md-1, .flush .col-md-2, .flush .col-md-3, .flush .col-md-4, .flush .col-md-5, .flush .col-md-6, .flush .col-md-7, .flush .col-md-8, .flush .col-md-9, .flush .col-md-10, .flush .col-md-11, .flush .col-md-12, .flush .col-lg-1, .flush .col-lg-2, .flush .col-lg-3, .flush .col-lg-4, .flush .col-lg-5, .flush .col-lg-6, .flush .col-lg-7, .flush .col-lg-8, .flush .col-lg-9, .flush .col-lg-10, .flush .col-lg-11, .flush .col-lg-12 {padding-left: 0; padding-right: 0;}

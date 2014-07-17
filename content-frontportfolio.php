@@ -13,6 +13,12 @@
 if (get_theme_mod('safari_front_featured_portfolio_check')) {
     $featured_count = intval(get_theme_mod('safari_front_featured_portfolio_count'));
     $var = get_theme_mod('safari_front_featured_portfolio_cat');
+    if (get_theme_mod('safari_portfolio_count')) {
+    $grid_count =intval(get_theme_mod('safari_portfolio_count'));
+    }
+    else {
+        $grid_count = 3; 
+    }
 
     // if no category is selected then return 0 
     $featured_cat_id = max((int) $var, 0);
@@ -25,7 +31,7 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
     );
     $featuredportfolio = new WP_Query($featured_portfolio_args);
     ?>
-
+<section class="portfolio-area">
     <div class="home-portfolio-title-area" id="portfolio-title">
             <div class="home-portfolio-title section-title">
                  <?php if ( get_theme_mod('safari_portfolio_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('safari_portfolio_title')); ?></h3>
@@ -38,34 +44,75 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                             <?php } ?>
             </div>
     </div>
-   
+            <ul id="filters">
+                    <?php
+                        $terms = get_terms('portfolio_category');
+                        $count = count($terms);
+                            echo '<li><a href="javascript:void(0)" data-filter="all" class="filter active">All</a></li>';
+                        if ( $count > 0 ){
+
+                            foreach ( $terms as $term ) {
+
+                                $termname = strtolower($term->name);
+                                $termname = str_replace(' ', '-', $termname);
+                                echo '<li><a href="javascript:void(0)" class="filter" data-filter=".'.$termname.'">'.$term->name.'</a></li>';
+                            }
+                        }
+                    ?>
+                </ul>
 
             <div id="featured-portfolio">
-                <div class="portfolio-wrap">
+                <div class="portfolio-wrap flush clearfix">
                 
                 <?php if ($featuredportfolio->have_posts()) : $i = 1; ?>
 
                     <?php while ($featuredportfolio->have_posts()) : $featuredportfolio->the_post(); ?>
-                    
-                        <div class="home-featured-portfolio col-sm-4">
+                    <?php $containerClass = "col-sm-" . 12 / $grid_count ; 
+                        
+                    $terms = get_the_terms( $post->ID, 'portfolio_category' );	
+                    if ( $terms && ! is_wp_error( $terms ) ) : 
+
+                        $links = array();
+
+                        foreach ( $terms as $term ) {
+                            $links[] = $term->name;
+                        }
+
+                        $tax_links = join( " ", str_replace(' ', '-', $links));          
+                        $tax = strtolower($tax_links);
+                    else :	
+                        $tax = '';					
+                    endif; 
+                     $containerClass = $containerClass.' '.$tax; 
+?>
+            
+                        <div class="home-featured-portfolio all mix <?php echo $containerClass; ?> ">
 
                             <div class="featured-portfolio-content">
 
                                 <a href="<?php the_permalink(); ?>">
 
-                                    <?php the_post_thumbnail('post_feature_thumb'); ?>
-                                    <span><i class="fa fa-link"></i></span>
+                                    <?php the_post_thumbnail('portfolio_feature_thumb'); ?>
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
 
-                            <a href="<?php the_permalink(); ?>">
-
-                                <h4 class="home-featured-portfolio-title"><?php the_title(); ?></h4>
-
-                            </a>
-                           
-                        </div><!--end .home-featured-portfolio-->
+                                <h4 class="home-featured-portfolio-title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a>
+                                </h4>
+                                <?php
+                                echo '<ul>';
+                                $args_list = array(
+                                    'taxonomy' => 'portfolio_category', // Registered tax name
+                                    'show_count' => false,
+                                    'hierarchical' => true,
+                                    'echo' => '0',
+                                    'title_li' => __('','safari'),
+                                );
+                                echo wp_list_categories($args_list);
+                                echo '</ul>';
+                                ?>
+                            </div><!--end .home-featured-portfolio-->
                    
                         <?php $i+=1; ?>
 
@@ -79,7 +126,7 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                 <?php endif; ?>
            </div>         
         </div> <!-- /#featured-portfolio -->
-
+</section>
       
 <?php
 } if (!get_theme_mod('safari_front_featured_portfolio_check') && !get_theme_mod('safari_hide_sample_portfolio'))

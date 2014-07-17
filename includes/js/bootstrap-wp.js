@@ -20,7 +20,7 @@ jQuery( document ).ready( function( $ ) {
 
     $( '.widget_rss ul' ).addClass( 'media-list' );
 
-    $( '.widget_meta ul, .widget_recent_entries ul, .widget_archive ul, .widget_categories ul, .widget_nav_menu ul, .widget_pages ul' ).addClass( 'nav' );
+    
 
     $( '.widget_recent_comments ul#recentcomments' ).css( 'list-style', 'none').css( 'padding-left', '0' );
     $( '.widget_recent_comments ul#recentcomments li' ).css( 'padding', '5px 15px');

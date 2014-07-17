@@ -38,7 +38,12 @@ function safari_setup() {
 		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		*/
 		add_theme_support( 'post-thumbnails' );
-
+                
+                // Create an extra image size for the Post thumbnail image
+		add_image_size( 'post_feature_thumb', 368, 243, true );
+                
+                // Create an extra image size for the Post thumbnail image
+		add_image_size( 'portfolio_feature_thumb', 368, 300, true );
 		/**
 		 * Enable support for Post Formats
 		*/
@@ -160,8 +165,10 @@ function safari_scripts() {
 	wp_enqueue_script( 'safari-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
         
          wp_enqueue_script('safari-slider', get_template_directory_uri() . '/includes/js/jquery.flexslider-min.js', array('jquery'));
+          wp_enqueue_script('mixitup', get_template_directory_uri() . '/includes/js/jquery.mixitup.js', array('jquery'));
          wp_enqueue_script('safari-custom-scripts', get_template_directory_uri() . '/includes/js/custom-scripts.js', array(), '1.0', 'all', false);
-
+         
+        
 }
 add_action( 'wp_enqueue_scripts', 'safari_scripts' );
 
