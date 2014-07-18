@@ -42,6 +42,6 @@ jQuery(document).ready(function() {
     });
     
     jQuery(function() {
-        jQuery('#featured-portfolio').mixItUp();
+        jQuery('.portfolio-wrap').mixItUp();
     });
 });

@@ -366,7 +366,7 @@ get_header();
                   <?php if ( get_theme_mod('counter_description_one') !='' ) {  ?>
                   <p><?php echo esc_html(get_theme_mod('counter_description_one')); ?></p>
                            <?php } else { ?>
-                          <p><?php esc_html_e('Clients.', 'safari') ?> </p>
+                          <p><?php esc_html_e('Clients', 'safari') ?> </p>
                                            <?php } ?>
                     </div>
                 </div>
