@@ -495,14 +495,14 @@ object {
 }
 
 .home-team-member-title {
-    margin: 25px 0 0; 
+    margin: 20px 0; 
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .featured-team-content .team-member-role {
-    margin: 5px 0 15px; 
+    margin: 0px 0 20px; 
     color: #999;
     font-size: 12px;
 }
