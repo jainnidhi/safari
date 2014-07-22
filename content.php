@@ -14,8 +14,16 @@
 // for example content-single.php for the post single view. ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="page-header">
-		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <div class="post-image">
+            <?php if (get_the_post_thumbnail() && !is_search() ) { ?>
+                    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( the_title_attribute( 'echo=0' ) ) ); ?>">
+                            <?php the_post_thumbnail( 'post_feature_full_width' ); ?>
+                      
+                    </a>
+            <?php } ?>
+        </div>
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -24,7 +32,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( is_search() || is_archive() ) : // Only display Excerpts for Search and Archive Pages ?>
+	<?php if ( !is_single() || is_search() || is_archive() ) : // Only display Excerpts for Search and Archive Pages ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
@@ -39,6 +47,8 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+        
+        <?php if(is_single()) { ?>
 
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
@@ -69,4 +79,5 @@
 
 		<?php edit_post_link( __( 'Edit', 'safari' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+        <?php } ?>
 </article><!-- #post-## -->

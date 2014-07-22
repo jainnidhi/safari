@@ -70,9 +70,7 @@
 		</div>
 	</div><!-- .container -->
 </header><!-- #masthead -->
-
-
-<?php if(!is_front_page()) { ?>
+<?php if(!is_front_page() && !is_home() && !is_single()) { ?>
 <div class="main-content">
 	<div class="container">
 		<div class="row">

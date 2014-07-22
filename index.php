@@ -13,6 +13,29 @@
 
 get_header(); ?>
 
+    <div class="post-featured-image">
+        <?php if ( get_theme_mod('blog_featured_image')) { ?>
+		<img src="<?php echo get_theme_mod('blog_featured_image'); ?>" />
+	<?php } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/includes/images/slider1.jpg" alt=""/>
+        <?php  } ?>
+                <div class="blog-content">
+                     <?php if ( get_theme_mod('blog_page_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('blog_page_title')); ?></h3>
+
+                            <?php } else {  ?> <h1><?php esc_html_e(' Our Blog', 'safari') ?></h1>
+                                     <?php } ?>
+                            
+                            <?php if ( get_theme_mod('blog_page_description') !='' ) {  ?>
+                            <p><?php echo esc_html(get_theme_mod('blog_page_description')); ?></p>
+                                     <?php } else { ?>
+                                    <p><?php esc_html_e('This is the blog description block.', 'safari') ?> </p>
+                                            <?php } ?>
+                </div>
+    </div>
+<div class="main-content">
+	<div class="container">
+		<div class="row">
+			<div id="content" class="main-content-inner col-sm-12 col-md-8">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>

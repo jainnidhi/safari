@@ -57,6 +57,8 @@ body {
     margin:0;
     font-family:'Open Sans', sans-serif;
     background:#fff;
+    font-size:14px;
+    line-height:1.7;
 }
 
 a{
@@ -65,8 +67,8 @@ a{
 }
 
 p{
-    font-size:13px;
     color:#686868;
+    line-height:2;
 }
 
 a:hover{
@@ -176,10 +178,11 @@ object {
 
 /* Content */
 .main-content-inner {
-    padding-bottom: 1.5em;
+    padding: 0 50px 15px 15px;
 }
 .hentry {
-    margin: 0 0 1.5em;
+    padding:0px 0 50px;
+    border-bottom:1px solid #ddd;
 }
 
 .container{
@@ -898,6 +901,255 @@ object {
     color:#5cc8c5;
     border:1px solid #5cc8c5;
 }
+
+/* Main Content */
+
+.main-content{
+    margin-top:95px;
+    padding:100px 0;
+}
+
+.blog .main-content,
+.single .main-content{
+    margin-top:0;
+}
+
+.entry-title{
+    font-size:20px;
+    color:#444;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+
+.page-header{
+    border-bottom:0px;
+}
+
+.header-meta {
+    color: #999;
+    margin-bottom: 40px;
+}
+
+.header-meta a {
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size:12px;
+}
+
+.entry-header address {
+    display: inline;
+}
+
+.entry-header time, .entry-header address {
+    margin: 0 20px 0 0;
+}
+
+/* Blog Page */
+
+.post-featured-image {
+    position: relative;
+    margin-top:95px;
+}
+
+.post-featured-image img{
+    height:220px;
+    width:100%;
+}
+
+
+.blog-content {
+    position: absolute;
+    bottom: 30%;
+    display: block;
+    width:100%;
+    text-align:center;
+}
+
+.blog-content h1 {
+    font-size: 30px;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.blog-content h1, .blog-content p {
+    color: #fff;
+}
+
+.blog-content p{
+    font-size:15px;
+}
+
+.more-link{
+    padding: 6px 32px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin-top:35px;
+}
+
+.single .hentry{
+    padding-top:0;
+}
+
+.single .entry-content{
+    margin-bottom:45px;
+}
+
+.post-tags a{
+    color:#999;
+    font-size:12px;
+}
+
+.panel-default {
+    border: 0px;
+    border-color:none;
+}
+
+.panel-default > .panel-heading{
+    background:none;
+    border-bottom:0px;
+    padding:0px 10px;
+}
+
+.panel-footer{
+    border-top:0px;
+    background:none;
+}
+
+.panel{
+    box-shadow:none;
+}
+
+.comment-list article{
+    position:relative;
+    border-bottom:1px solid #ddd;
+    margin-bottom:30px;
+}
+
+.comment-reply-link{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background: none;
+    color: #5cc8c5;
+    border: 0;
+    font-size:12px;
+}
+
+.comment-reply-link:hover{
+    color:#5cc8c5;
+    background: none;
+    border: none;
+}
+
+.comment .children{
+    margin-left:90px;
+}
+
+.comment-body .avatar{
+    width:80px;
+    height:80px;
+}
+
+.comments-title{
+    font-size:15px;
+    text-transform:uppercase;
+    color:#444;
+    font-weight:700;
+}
+
+.media-heading, .comment-meta{
+    font-size:12px;
+    color:#999;
+    margin-bottom:10px;
+}
+
+.comment-body cite{
+    color:#444;
+    font-size:12px;
+    font-weight:700;
+}
+
+.panel-body{
+    padding:0 10px;
+}
+
+#comments .page-header{
+    margin-top:0;
+}
+
+#comments{
+    padding-top:60px;
+}
+
+.media-list{
+    padding-bottom:70px;
+}
+
+#reply-title{
+    color:#444;
+    font-size:15px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+#respond form{
+    margin-top:40px;
+}
+
+#respond .form-allowed-tags,
+#respond .alert{
+    display:none;
+}
+
+#commentsubmit{
+    background: #5cc8c5;
+    padding: 10px 28px;
+    border-radius: 2px;
+    border: 0;
+    text-transform: uppercase;
+    float: right;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Sidebar */
+
+.sidebar{
+    padding:0px 15px 50px;
+}
+
+.sidebar .widget-title{
+    font-size:15px;
+    font-weight:700;
+    color:#444;
+    text-transform:uppercase;
+    margin:30px 0;
+}
+
+.sidebar ul li a{
+    color:#686868;
+    font-size:13px;
+}
+
+.sidebar ul li{
+    margin-bottom:15px;
+    padding-bottom:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.sidebar ul li:last-child{
+    border-bottom:0px;
+}
+
+.sidebar .widget{
+    margin-bottom:50px;
+}
+
 
 /* Main Navigation */
 

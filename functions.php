@@ -39,6 +39,9 @@ function safari_setup() {
 		*/
 		add_theme_support( 'post-thumbnails' );
                 
+                // Create an extra image size for the Post featured image
+		add_image_size( 'post_feature_full_width', 750, 440, true );
+                
                 // Create an extra image size for the Post thumbnail image
 		add_image_size( 'post_feature_thumb', 368, 243, true );
                 
@@ -183,7 +186,7 @@ add_action( 'wp_enqueue_scripts', 'safari_scripts' );
  * @return string The 'Continue reading' link
  */
 function safari_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'safari' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'safari' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Read More', 'safari' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Read More', 'safari' ), array( 'span' => array( 
 			'class' => array() ) ) ) . '</a></p>';
 }
 
@@ -200,26 +203,6 @@ function safari_auto_excerpt_more( $more ) {
 	return safari_continue_reading_link();
 }
 add_filter( 'excerpt_more', 'safari_auto_excerpt_more' );
-
-
-
-/*
- * 
- * Set excerpt length for post on front page
- * and post excerpts on rest of the pages.
- * 
- */
-function safari_excerpt_length($length) {
-    global $post;
-    if ($post->post_type == 'post') {
-        return 20;
-    }
-   
-    else {
-        return 50;
-    }
-}
-add_filter('excerpt_length', 'safari_excerpt_length');
 
 
 /**
