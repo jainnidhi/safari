@@ -1098,7 +1098,7 @@ function safari_customize_register($wp_customize) {
         'sanitize_callback' => 'safari_sanitize_checkbox',
     ));
     $wp_customize->add_control('safari_hide_sample_portfolio', array(
-        'label' => __('Hide sample portfolio on Front Page', 'passion'),
+        'label' => __('Hide sample portfolio on Front Page', 'safari'),
         'section' => 'safari_front_page_portfolio_options',
         'priority' => 2,
         'type' => 'checkbox',
@@ -1273,6 +1273,52 @@ function safari_customize_register($wp_customize) {
         'section' => 'safari_counter_setting',
         'settings' => 'counter_description_four',
         'priority' => 8,
+    )));
+    
+    // Add new section for blog settings
+    $wp_customize->add_section('safari_blog_page_settings', array(
+        'title' => __('Blog Settings', 'safari'),
+        'description' => __('Settings for blog page', 'safari'),
+        'priority' => 55,
+    ));
+
+    $wp_customize->add_setting('blog_featured_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'blog_featured_image', array(
+        'label' => 'Blog Featured Image',
+        'section' => 'safari_blog_page_settings',
+        'settings' => 'blog_featured_image',
+        'priority' => 1,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('blog_page_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('blog_page_title', array(
+        'label' => __('Section Title', 'safari'),
+        'section' => 'safari_blog_page_settings',
+        'settings' => 'blog_page_title',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('blog_page_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'blog_page_description', array(
+        'label' => __('Description', 'safari'),
+        'section' => 'safari_blog_page_settings',
+        'settings' => 'blog_page_description',
+        'priority' => 3,
     )));
 
 
