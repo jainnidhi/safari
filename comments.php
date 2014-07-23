@@ -71,7 +71,7 @@ if ( post_password_required() )
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'safari' ); ?></p>
 	<?php endif; ?>
-
+        <?php ob_start(); ?>
 	<?php comment_form( $args = array(
 			  'id_form'           => 'commentform',  // that's the wordpress default value! delete it or edit it ;)
 			  'id_submit'         => 'commentsubmit',
@@ -79,9 +79,15 @@ if ( post_password_required() )
 			  'title_reply_to'    => __( 'Leave a Reply to %s' ),  // that's the wordpress default value! delete it or edit it ;)
 			  'cancel_reply_link' => __( 'Cancel Reply' ),  // that's the wordpress default value! delete it or edit it ;)
 			  'label_submit'      => __( 'Post Comment' ),  // that's the wordpress default value! delete it or edit it ;)
-
-			  'comment_field' =>  '<p><textarea placeholder="Start typing..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
-
+                          'logged_in_as' => '<p class="logged-in-as col-md-5">' .
+                                            sprintf(
+                                            __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+                                              admin_url( 'profile.php' ),
+                                              $user_identity,
+                                              wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+                                            ) . '</p>',
+			  'comment_field' =>  '<div class="col-md-7"><textarea placeholder="Message" id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>',
+                          
 			  'comment_notes_after' => '<p class="form-allowed-tags">' .
 				__( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:' ) .
 				'</p><div class="alert alert-info">' . allowed_tags() . '</div>'
@@ -93,7 +99,9 @@ if ( post_password_required() )
 			  // Another note: some classes are added in the bootstrap-wp.js - ckeck from line 1
 
 	));
-
+        
+        
+        echo str_replace('class="comment-form"', 'class="comment-form row flush"', ob_get_clean());
 	?>
 
 </div><!-- #comments -->

@@ -75,6 +75,14 @@ a:hover{
     text-decoration:none;
 }
 
+h1,h2,h3,h4,h5,h6{
+    font-size:15px;
+    color:#444;
+    font-weight:700;
+    text-transform:uppercase;
+    line-height:1;
+}
+
 ul{
     padding-left:0;
     list-style:none;
@@ -178,11 +186,12 @@ object {
 
 /* Content */
 .main-content-inner {
-    padding: 0 50px 15px 15px;
+    padding: 0 15px 15px 15px;
 }
 .hentry {
     padding:0px 0 50px;
     border-bottom:1px solid #ddd;
+    margin-bottom:50px;
 }
 
 .container{
@@ -273,6 +282,12 @@ object {
     background: #fff;
     top: 0;
     min-height: 90px;
+}
+
+.site-title{
+    font-size:30px;
+    text-transform:none;
+    margin:10px 0;
 }
 
 .slider-wrapper{
@@ -906,7 +921,7 @@ object {
 
 .main-content{
     margin-top:95px;
-    padding:100px 0;
+    padding:85px 0;
 }
 
 .blog .main-content,
@@ -920,16 +935,25 @@ object {
     text-transform:uppercase;
     font-weight:700;
     margin-top:40px;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .page-header{
     border-bottom:0px;
 }
 
+.single .entry-meta .fa{
+    font-size:13px;
+    color:#9f9f9f;
+    margin-right:5px;
+}
 .header-meta {
     color: #999;
     margin-bottom: 40px;
+}
+
+.header-meta .fa{
+    font-size:12px;
 }
 
 .header-meta a {
@@ -956,14 +980,13 @@ object {
 }
 
 .post-featured-image img{
-    height:220px;
     width:100%;
 }
 
 
 .blog-content {
     position: absolute;
-    bottom: 30%;
+    bottom: 26%;
     display: block;
     width:100%;
     text-align:center;
@@ -971,9 +994,7 @@ object {
 
 .blog-content h1 {
     font-size: 30px;
-    text-transform:uppercase;
-    font-weight:700;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .blog-content h1, .blog-content p {
@@ -1001,7 +1022,7 @@ object {
 
 .post-tags a{
     color:#999;
-    font-size:12px;
+    font-size:13px;
 }
 
 .panel-default {
@@ -1033,7 +1054,7 @@ object {
 .comment-reply-link{
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 0px;
     background: none;
     color: #5cc8c5;
     border: 0;
@@ -1055,17 +1076,19 @@ object {
     height:80px;
 }
 
-.comments-title{
-    font-size:15px;
-    text-transform:uppercase;
-    color:#444;
-    font-weight:700;
+.media-heading{
+    margin-top:2px;
 }
 
 .media-heading, .comment-meta{
     font-size:12px;
     color:#999;
-    margin-bottom:10px;
+    margin-bottom:15px;
+    text-transform:none;
+}
+
+.comment-meta{
+    margin-bottom:13px;
 }
 
 .comment-body cite{
@@ -1083,19 +1106,21 @@ object {
 }
 
 #comments{
-    padding-top:60px;
+    padding-top:30px;
+}
+
+#comments p{
+    line-height:1;
+}
+
+.comments-title{
+    margin-top:0;
 }
 
 .media-list{
     padding-bottom:70px;
 }
 
-#reply-title{
-    color:#444;
-    font-size:15px;
-    font-weight:700;
-    text-transform:uppercase;
-}
 
 #respond form{
     margin-top:40px;
@@ -1115,20 +1140,18 @@ object {
     float: right;
     font-size: 12px;
     font-weight: 700;
+    margin-top:20px;
 }
 
 /* Sidebar */
 
 .sidebar{
-    padding:0px 15px 50px;
+    padding:0px 15px 50px 35px;
+    line-height:1;
 }
 
 .sidebar .widget-title{
-    font-size:15px;
-    font-weight:700;
-    color:#444;
-    text-transform:uppercase;
-    margin:30px 0;
+    margin:0 0 30px 0;
 }
 
 .sidebar ul li a{
@@ -1246,6 +1269,13 @@ object {
     display: inline-block;
     border-bottom: 2px solid #868282;
     margin-bottom:35px;
+    margin-top:0;
+    font-weight:700;
+}
+
+.footer-intro p{
+    margin-bottom:0;
+    line-height:1.6;
 }
 
 .search-form input[type="submit"]:after{

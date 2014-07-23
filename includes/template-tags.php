@@ -269,6 +269,34 @@ function safari_categorized_blog() {
 	}
 }
 
+
+/**
+ * Update the Comments form so that the 'required' span is contained within the form label.
+ *
+ * @since Safari 1.0
+ *
+ * @param string Comment form fields html
+ * @return string The updated comment form fields html
+ */
+function safari_comment_form_default_fields( $fields ) {
+
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? ' aria-required="true"' : "" );
+       
+	$fields[ 'author' ] = '<div class="col-md-5 comment-form-left"><p class="comment-form-author">' . '<input id="author" name="author" type="text" placeholder=" Name " value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
+
+	$fields[ 'email' ] =  '<p class="comment-form-email">' . '<input id="email" name="email" type="text" placeholder=" Email " value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
+
+	$fields[ 'url' ] =  '<p class="comment-form-url">' . '<input id="url" name="url" type="text" placeholder=" Website " value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p></div>';
+        
+        
+	return $fields;
+
+}
+add_action( 'comment_form_default_fields', 'safari_comment_form_default_fields' );
+
+
 /**
  * Flush out the transients used in safari_categorized_blog
  */

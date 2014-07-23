@@ -17,7 +17,7 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div class="site-footer-inner col-sm-12">
+			<div class="site-footer-inner">
                         <?php
                                 // Count how many footer sidebars are active so we can work out how many containers we need
                                 $footerSidebars = 0;
@@ -30,7 +30,7 @@
                                 // If there's one or more one active sidebars, create a row and add them
                                 if ($footerSidebars > 0) {
                                     ?>
-                                    <footer class="site-footer row" role="contentinfo">
+                                    <footer class="site-footer" role="contentinfo">
                                         <?php
                                         // Work out the container class name based on the number of active footer sidebars
                                         $containerClass = "col-sm-" . 12 / $footerSidebars;

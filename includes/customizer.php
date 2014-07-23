@@ -1279,7 +1279,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_blog_page_settings', array(
         'title' => __('Blog Settings', 'safari'),
         'description' => __('Settings for blog page', 'safari'),
-        'priority' => 55,
+        'priority' => 54,
     ));
 
     $wp_customize->add_setting('blog_featured_image', array(
@@ -1320,6 +1320,52 @@ function safari_customize_register($wp_customize) {
         'settings' => 'blog_page_description',
         'priority' => 3,
     )));
+    
+    // Add new section for blog settings
+    $wp_customize->add_section('safari_single_post_page_settings', array(
+        'title' => __('Single Post Settings', 'safari'),
+        'description' => __('Settings for single post', 'safari'),
+        'priority' => 55,
+    ));
+
+    $wp_customize->add_setting('single_post_featured_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'single_post_featured_image', array(
+        'label' => 'Blog Featured Image',
+        'section' => 'safari_blog_page_settings',
+        'settings' => 'single_post_featured_image',
+        'priority' => 1,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('sinlge_post_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('sinlge_post_title', array(
+        'label' => __('Section Title', 'safari'),
+        'section' => 'safari_single_post_page_settings',
+        'settings' => 'sinlge_post_title',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('single_post_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'single_post_description', array(
+        'label' => __('Description', 'safari'),
+        'section' => 'safari_single_post_page_settings',
+        'settings' => 'single_post_description',
+        'priority' => 3,
+    )));
 
 
 
@@ -1327,7 +1373,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_front_page_post_options', array(
         'title' => __('Featured Posts', 'safari'),
         'description' => __('Settings for displaying featured posts on Front Page', 'safari'),
-        'priority' => 55,
+        'priority' => 56,
     ));
 
     // enable featured posts on front page?
@@ -1395,7 +1441,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_team_settings', array(
         'title' => __('Team Settings', 'safari'),
         'description' => __('Settings for team', 'safari'),
-        'priority' => 56,
+        'priority' => 57,
     ));
 
     // enable team member on front page?
@@ -1460,7 +1506,7 @@ function safari_customize_register($wp_customize) {
     // Add new section for Testimonial slider settings
     $wp_customize->add_section('testimonial_slider_setting', array(
         'title' => __('Testimonial Slider', 'safari'),
-        'priority' => 57,
+        'priority' => 58,
     ));
 
 

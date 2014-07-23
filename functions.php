@@ -40,7 +40,7 @@ function safari_setup() {
 		add_theme_support( 'post-thumbnails' );
                 
                 // Create an extra image size for the Post featured image
-		add_image_size( 'post_feature_full_width', 750, 440, true );
+		add_image_size( 'post_feature_full_width', 769, 440, true );
                 
                 // Create an extra image size for the Post thumbnail image
 		add_image_size( 'post_feature_thumb', 368, 243, true );
