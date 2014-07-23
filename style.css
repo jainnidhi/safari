@@ -1146,8 +1146,8 @@ object {
 
 /* Pagination */
 
-.pager li > a,
-.pager li > span{
+.paging-navigation .pager li > a,
+.paging-navigation .pager li > span{
     padding: 8px 24px;
     border: 1px solid #ddd;
     display: inline-block;
