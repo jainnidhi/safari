@@ -1044,6 +1044,7 @@ object {
 
 .panel{
     box-shadow:none;
+    margin-bottom:10px;
 }
 
 .comment-list article{
@@ -1060,12 +1061,17 @@ object {
     color: #5cc8c5;
     border: 0;
     font-size:12px;
+    padding:0;
 }
 
 .comment-reply-link:hover{
     color:#5cc8c5;
     background: none;
     border: none;
+}
+
+#reply-title{
+    margin-top:0;
 }
 
 .comment .children{
@@ -1108,6 +1114,7 @@ object {
 
 #comments{
     padding-top:30px;
+    line-height:1;
 }
 
 #comments p{
@@ -1119,7 +1126,7 @@ object {
 }
 
 .media-list{
-    padding-bottom:70px;
+    padding-bottom:40px;
 }
 
 
@@ -1142,6 +1149,19 @@ object {
     font-size: 12px;
     font-weight: 700;
     margin-top:20px;
+}
+
+#commentform input{
+    padding:9px 5px;
+    border-radius: 3px;
+}
+
+#commentform p{
+    margin-bottom:20px;
+}
+
+#commentform p:last-child{
+    margin-bottom:0;
 }
 
 /* Pagination */
