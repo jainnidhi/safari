@@ -68,7 +68,7 @@ a{
 
 p{
     color:#686868;
-    line-height:2;
+    line-height:1.7;
 }
 
 a:hover{
@@ -189,7 +189,7 @@ object {
     padding: 0 15px 15px 15px;
 }
 .hentry {
-    padding:0px 0 50px;
+    padding:0px 0 40px;
     border-bottom:1px solid #ddd;
     margin-bottom:50px;
 }
@@ -949,7 +949,7 @@ object {
 }
 .header-meta {
     color: #999;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .header-meta .fa{
@@ -1006,10 +1006,11 @@ object {
 }
 
 .more-link{
-    padding: 6px 32px;
+    padding: 8px 24px;
     border: 1px solid #ddd;
     display: inline-block;
     margin-top:35px;
+    text-transform:uppercase;
 }
 
 .single .hentry{
@@ -1017,7 +1018,7 @@ object {
 }
 
 .single .entry-content{
-    margin-bottom:45px;
+    margin-bottom:35px;
 }
 
 .post-tags a{
@@ -1033,7 +1034,7 @@ object {
 .panel-default > .panel-heading{
     background:none;
     border-bottom:0px;
-    padding:0px 10px;
+    padding:0;
 }
 
 .panel-footer{
@@ -1098,7 +1099,7 @@ object {
 }
 
 .panel-body{
-    padding:0 10px;
+    padding:0;
 }
 
 #comments .page-header{
@@ -1141,6 +1142,17 @@ object {
     font-size: 12px;
     font-weight: 700;
     margin-top:20px;
+}
+
+/* Pagination */
+
+.pager li > a,
+.pager li > span{
+    padding: 8px 24px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius:0px;
 }
 
 /* Sidebar */
