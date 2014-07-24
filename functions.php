@@ -171,7 +171,7 @@ function safari_scripts() {
           wp_enqueue_script('mixitup', get_template_directory_uri() . '/includes/js/jquery.mixitup.js', array('jquery'));
          wp_enqueue_script('safari-custom-scripts', get_template_directory_uri() . '/includes/js/custom-scripts.js', array(), '1.0', 'all', false);
          
-         wp_enqueue_script('menu-dropdown', get_template_directory_uri() . '/includes/js/bootstrap-hover-dropdown.js', array(), '2.0.10', 'all', false);
+         //wp_enqueue_script('menu-dropdown', get_template_directory_uri() . '/includes/js/bootstrap-hover-dropdown.js', array(), '2.0.10', 'all', false);
          
         
 }

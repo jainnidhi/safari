@@ -191,7 +191,7 @@ if ( ! function_exists( 'safari_entry_meta' ) ) {
 		// Return the Tags as a list
 		$tag_list = "";
 		if ( get_the_tag_list() ) {
-			$tag_list = get_the_tag_list( '<span class="post-tags">', esc_html__( ' ', 'safari' ), '</span>' );
+			$tag_list = get_the_tag_list( '<span class="post-tags">', esc_html__( ', ', 'safari' ), '</span>' );
 		}
 
 		// Translators: 1 is tag

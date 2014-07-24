@@ -67,7 +67,7 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                 <?php if ($featuredportfolio->have_posts()) : $i = 1; ?>
 
                     <?php while ($featuredportfolio->have_posts()) : $featuredportfolio->the_post(); ?>
-                    <?php $containerClass = "col-sm-" . 12 / $grid_count ; 
+                    <?php $containerClass = "col-lg-" . 12 / $grid_count ; 
                         
                     $terms = get_the_terms( $post->ID, 'portfolio_category' );	
                     if ( $terms && ! is_wp_error( $terms ) ) : 
