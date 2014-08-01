@@ -44,4 +44,8 @@ jQuery(document).ready(function() {
     jQuery(function() {
         jQuery('.portfolio-wrap').mixItUp();
     });
+    
+    jQuery(function() {
+        jQuery('.portfolio-wrapper').mixItUp();
+    });
 });

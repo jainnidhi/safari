@@ -7,7 +7,7 @@
  * @package safari
  */
 ?>
-<?php if(!is_front_page()) { ?>
+<?php if(!is_front_page() && !is_home() && !is_single() && !is_post_type_archive('portfolio')) { ?>
 			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
 		</div><!-- close .row -->
 	</div><!-- close .container -->

@@ -70,7 +70,7 @@
 		</div>
 	</div><!-- .container -->
 </header><!-- #masthead -->
-<?php if(!is_front_page() && !is_home() && !is_single()) { ?>
+<?php if(!is_front_page() && !is_home() && !is_single() && !is_post_type_archive('portfolio')) { ?>
 <div class="main-content">
 	<div class="container">
 		<div class="row">
