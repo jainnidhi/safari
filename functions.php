@@ -45,8 +45,10 @@ function safari_setup() {
                 // Create an extra image size for the Post thumbnail image
 		add_image_size( 'post_feature_thumb', 368, 243, true );
                 
+                add_image_size( 'single_portfolio_thumb', 1200, 490, true );
+                
                 // Create an extra image size for the Post thumbnail image
-		add_image_size( 'portfolio_feature_thumb', 368, 300, true );
+		add_image_size( 'portfolio_feature_thumb', 600, 800, true );
 		/**
 		 * Enable support for Post Formats
 		*/
@@ -234,3 +236,21 @@ require get_template_directory() . '/includes/jetpack.php';
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
+
+
+function safari_custom_post_category() { ?>
+    <?php 
+                            $terms = get_the_terms( $post->ID, 'portfolio_category' );	
+                            if ( $terms && ! is_wp_error( $terms ) ) : 
+
+                                foreach ( $terms as $term ) {
+                                   echo $term->name;
+                                }
+
+                                $tax = $term;
+                            else :	
+                                $tax = '';
+                            echo $tax;
+                            endif; 
+                       
+} ?>

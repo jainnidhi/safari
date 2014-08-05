@@ -103,18 +103,20 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                 <h4 class="home-featured-portfolio-title">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a>
                                 </h4>
-                                <?php
-                                echo '<ul>';
-                                $args_list = array(
-                                    'taxonomy' => 'portfolio_category', // Registered tax name
-                                    'show_count' => false,
-                                    'hierarchical' => true,
-                                    'echo' => '0',
-                                    'title_li' => __('','safari'),
-                                );
-                                echo wp_list_categories($args_list);
-                                echo '</ul>';
-                                ?>    
+                                 <?php 
+                                    $terms = get_the_terms( $post->ID, 'portfolio_category' );	
+                                    if ( $terms && ! is_wp_error( $terms ) ) : 
+
+                                        foreach ( $terms as $term ) {
+                                           echo $term->name;
+                                        }
+
+                                        $tax = $term;
+                                    else :	
+                                        $tax = '';
+                                    echo $tax;
+                                    endif; 
+                                ?>
                            </span>
                             </div><!--end .home-featured-portfolio-->
                    

@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Template Name: Portfolio 3 Columns
  * A custom portfolio page template to display portfolio grid
  * Requires Portfolio Custom Post Type plugin to be activated
  * 
@@ -20,7 +20,7 @@ get_header(); ?>
                 <div class="blog-content">
                      <?php if ( get_theme_mod('portfolio_page_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('portfolio_page_title')); ?></h3>
 
-                            <?php } else {  ?> <h1><?php esc_html_e(' Portfolio', 'safari') ?></h1>
+                            <?php } else {  ?> <h1><?php esc_html_e(' Portfolio Three Column Page', 'safari') ?></h1>
                                      <?php } ?>
                             
                             <?php if ( get_theme_mod('portfolio_page_description') !='' ) {  ?>
@@ -31,7 +31,8 @@ get_header(); ?>
                 </div>
     </div>
 <div class="main-content clearfix">
-	
+	<div class="container">
+		<div class="row">
             <div id="content" class=" portfolio-page">
                 <ul id="filters">
                         <?php
@@ -82,29 +83,18 @@ get_header(); ?>
 ?>
             <div class="portfolio-wrapper">
 
-                <div id="post-<?php the_ID(); ?>" class="col-lg-3 portfolio all mix<?php if ($i % 4 == 0) { echo ' last'; } ?>">
+                <div id="post-<?php the_ID(); ?>" class="col-lg-4 portfolio all mix<?php if ($i % 4 == 0) { echo ' last'; } ?> <?php echo $containerClass; ?>">
 
                     <div class="portfolio-image">
                         <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('post_feature_thumb'); ?>
+                        <?php the_post_thumbnail('portfolio_feature_thumb'); ?>
                            
                         </a>
                       <div class="portfolio-inner">
                          <h2 class="home-featured-portfolio-title">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a>
                                 </h2>
-                            <?php
-                            echo '<ul>';
-                            $args_list = array(
-                                'taxonomy' => 'portfolio_category', // Registered tax name
-                                'show_count' => false,
-                                'hierarchical' => true,
-                                'echo' => '0',
-                                'title_li' => __('','safari'),
-                            );
-                            echo wp_list_categories($args_list);
-                            echo '</ul>';
-                            ?>    
+                            <?php safari_custom_post_category(); ?>
                       </div>
                           
                     </div>
@@ -134,7 +124,8 @@ get_header(); ?>
 <?php endif; ?>
             </div><!-- /.portfolio-wrapper -->
     </div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
-		
+                </div><!-- /.row-->
+        </div><!-- /.container -->
 </div><!-- close .main-content -->
 
 <?php get_footer(); ?>
