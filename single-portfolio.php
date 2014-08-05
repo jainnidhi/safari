@@ -57,8 +57,8 @@ get_header();
                         <h3 class="widget-title">Recent Posts</h3>		
                         <ul>
                             <li>Client: <a href="#">Toppers of Hackney</a></li>
-                            <li>Date: <a href="#">8 July 2014</a></li>
-                            <li>Skills: <a href="#">Design</a></li>
+                            <li>Date: <a href="#"><?php the_time(esc_html('j F Y','safari')); ?></a></li>
+                            <li>Skills: <a href="#"><?php safari_custom_post_category(); ?></a></li>
                         </ul>
                     </aside>
                 </div>

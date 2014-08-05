@@ -7,12 +7,6 @@
  * @package safari
  */
 ?>
-<?php if(!is_front_page() && !is_home() && !is_single() && !is_post_type_archive('portfolio')) { ?>
-			</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
-		</div><!-- close .row -->
-	</div><!-- close .container -->
-</div><!-- close .main-content -->
-<?php } ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="container">
@@ -58,10 +52,19 @@
         <div class="site-info">
             <div class="container">
                 <div class="row">
-                    <?php do_action( 'safari_credits' ); ?>
-                    <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'safari' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'safari' ), 'WordPress' ); ?></a>
-                    <span class="sep"> | </span>
-                    <?php printf( __( 'Theme: %1$s by %2$s.', 'safari' ), 'safari', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+                   <div class="site-info">
+				
+                                        <?php if(get_theme_mod('safari_footer_footer_text')) { ?>
+                                        <?php echo esc_html(get_theme_mod('safari_footer_footer_text')); ?>
+                                        <?php } else { ?>
+                                        <p>
+                                            <a href="<?php $safari_theme = wp_get_theme(); echo $safari_theme->get( 'ThemeURI' ); ?>">
+                                                <?php _e('Safari WordPress theme by IdeaBox', 'safari'); ?>
+                                            </a>
+                                        </p>
+                                        <?php } ?>
+                                        
+				</div><!-- close .site-info -->
                 </div>
             </div>
         </div><!-- close .site-info -->

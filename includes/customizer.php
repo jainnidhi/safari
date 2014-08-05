@@ -1165,12 +1165,196 @@ function safari_customize_register($wp_customize) {
         'settings' => 'safari_portfolio_front_count',
         'priority' => 40,
     ));
+    
+    // Add new section for single portfolio settings
+    $wp_customize->add_section('safari_single_portfolio_settings', array(
+        'title' => __('Single Portfolio Settings', 'safari'),
+        'description' => __('Settings for single portfolio', 'safari'),
+        'priority' => 53,
+    ));
+
+    $wp_customize->add_setting('single_portfolio_featured_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'single_portfolio_featured_image', array(
+        'label' => 'Single Portfolio Featured Image',
+        'section' => 'safari_single_portfolio_settings',
+        'settings' => 'single_portfolio_featured_image',
+        'priority' => 1,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('single_portfolio_page_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('single_portfolio_page_title', array(
+        'label' => __('Section Title', 'safari'),
+        'section' => 'safari_single_portfolio_settings',
+        'settings' => 'single_portfolio_page_title',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('single_portfolio_page_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'single_portfolio_page_description', array(
+        'label' => __('Description', 'safari'),
+        'section' => 'safari_single_portfolio_settings',
+        'settings' => 'single_portfolio_page_description',
+        'priority' => 3,
+    )));
+    
+     // Add new section for single portfolio settings
+    $wp_customize->add_section('safari_four_column_portfolio_settings', array(
+        'title' => __('Portfolio 4 Column Page Settings', 'safari'),
+        'description' => __('Settings for single portfolio', 'safari'),
+        'priority' => 54,
+    ));
+
+    $wp_customize->add_setting('portfolio_four_column_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'portfolio_four_column_image', array(
+        'label' => 'Single Portfolio Featured Image',
+        'section' => 'safari_four_column_portfolio_settings',
+        'settings' => 'portfolio_four_column_image',
+        'priority' => 1,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('portfolio_four_column_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('portfolio_four_column_title', array(
+        'label' => __('Section Title', 'safari'),
+        'section' => 'safari_four_column_portfolio_settings',
+        'settings' => 'portfolio_four_column_title',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('portfolio_four_column_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'portfolio_four_column_description', array(
+        'label' => __('Description', 'safari'),
+        'section' => 'safari_four_column_portfolio_settings',
+        'settings' => 'portfolio_four_column_description',
+        'priority' => 3,
+    )));
+    
+    // Add new section for single portfolio settings
+    $wp_customize->add_section('safari_three_column_portfolio_settings', array(
+        'title' => __('Portfolio 3 Column Page Settings', 'safari'),
+        'description' => __('Settings for single portfolio', 'safari'),
+        'priority' => 55,
+    ));
+
+    $wp_customize->add_setting('portfolio_three_column_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'portfolio_three_column_image', array(
+        'label' => 'Single Portfolio Featured Image',
+        'section' => 'safari_three_column_portfolio_settings',
+        'settings' => 'portfolio_three_column_image',
+        'priority' => 1,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('portfolio_three_column_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('portfolio_three_column_title', array(
+        'label' => __('Section Title', 'safari'),
+        'section' => 'safari_three_column_portfolio_settings',
+        'settings' => 'portfolio_three_column_title',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('portfolio_three_column_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'portfolio_three_column_description', array(
+        'label' => __('Description', 'safari'),
+        'section' => 'safari_three_column_portfolio_settings',
+        'settings' => 'portfolio_three_column_description',
+        'priority' => 3,
+    )));
+    
+    // Add new section for single portfolio settings
+    $wp_customize->add_section('safari_two_column_portfolio_settings', array(
+        'title' => __('Portfolio 3 Column Page Settings', 'safari'),
+        'description' => __('Settings for single portfolio', 'safari'),
+        'priority' => 56,
+    ));
+
+    $wp_customize->add_setting('portfolio_two_column_image', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'portfolio_two_column_image', array(
+        'label' => 'Single Portfolio Featured Image',
+        'section' => 'safari_two_column_portfolio_settings',
+        'settings' => 'portfolio_two_column_image',
+        'priority' => 1,
+            )
+            )
+    );
+
+    $wp_customize->add_setting('portfolio_two_column_title', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('portfolio_two_column_title', array(
+        'label' => __('Section Title', 'safari'),
+        'section' => 'safari_two_column_portfolio_settings',
+        'settings' => 'portfolio_two_column_title',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('portfolio_two_column_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new safari_customize_textarea_control($wp_customize, 'portfolio_two_column_description', array(
+        'label' => __('Description', 'safari'),
+        'section' => 'safari_two_column_portfolio_settings',
+        'settings' => 'portfolio_two_column_description',
+        'priority' => 3,
+    )));
 
 
     // Add new section for Counter settings
     $wp_customize->add_section('safari_counter_setting', array(
         'title' => __('Counter Settings', 'safari'),
-        'priority' => 53,
+        'priority' => 57,
     ));
 
     // home Title
@@ -1279,7 +1463,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_blog_page_settings', array(
         'title' => __('Blog Settings', 'safari'),
         'description' => __('Settings for blog page', 'safari'),
-        'priority' => 54,
+        'priority' => 58,
     ));
 
     $wp_customize->add_setting('blog_featured_image', array(
@@ -1325,7 +1509,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_single_post_page_settings', array(
         'title' => __('Single Post Settings', 'safari'),
         'description' => __('Settings for single post', 'safari'),
-        'priority' => 55,
+        'priority' => 59,
     ));
 
     $wp_customize->add_setting('single_post_featured_image', array(
@@ -1373,7 +1557,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_front_page_post_options', array(
         'title' => __('Featured Posts', 'safari'),
         'description' => __('Settings for displaying featured posts on Front Page', 'safari'),
-        'priority' => 56,
+        'priority' => 60,
     ));
 
     // enable featured posts on front page?
@@ -1441,7 +1625,7 @@ function safari_customize_register($wp_customize) {
     $wp_customize->add_section('safari_team_settings', array(
         'title' => __('Team Settings', 'safari'),
         'description' => __('Settings for team', 'safari'),
-        'priority' => 57,
+        'priority' => 61,
     ));
 
     // enable team member on front page?
@@ -1506,7 +1690,7 @@ function safari_customize_register($wp_customize) {
     // Add new section for Testimonial slider settings
     $wp_customize->add_section('testimonial_slider_setting', array(
         'title' => __('Testimonial Slider', 'safari'),
-        'priority' => 58,
+        'priority' => 62,
     ));
 
 
