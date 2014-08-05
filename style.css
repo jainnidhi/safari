@@ -948,6 +948,9 @@ object {
     display:none;
 }
 
+.portfolio-image{
+    position:relative;
+}
 .portfolio-image img{
     width:100%;
 }
@@ -958,7 +961,7 @@ object {
 
 .portfolio-inner a,
 .portfolio-inner h2 a{
-    color:#fff;
+    color:#111;
 }
 
 .portfolio .portfolio-inner {
@@ -966,12 +969,11 @@ object {
     position: absolute;
     text-align: center;
     color: #fff;
-    top: 0px;
-    padding: 100px 10px;
-    opacity: 0;
+    bottom: 0px;
+    padding: 8px 10px;
+    opacity: 1;
     width: 100%;
-    background: rgba(92,200,197,0.8);
-    height: 313px;
+    background: #fff;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -khtml-transition: all 0.3s ease;
@@ -979,11 +981,19 @@ object {
 }
 
 .portfolio:hover .portfolio-inner{
-    opacity:1;
+    height:100%;
+    top:0;
+    background:rgba(92,200,197,0.8);
+    padding:100px 10px;;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -khtml-transition: all 0.3s ease;
     -moz-transitiokn: all 0.3s ease;
+}
+
+.portfolio:hover .portfolio-inner h2 a,
+.portfolio:hover .portfolio-inner a{
+    color:#fff;
 }
 
 .portfolio-page #filters{
