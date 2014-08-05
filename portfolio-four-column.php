@@ -98,10 +98,9 @@ get_header(); ?>
                       </div>
                           
                     </div>
-                      
-                       
           
-                </div><!--end .product-->
+                </div><!--end .portfolio-post -->
+            </div> <!-- end .portfolio-wrapper --> 
                     <?php $i+=1; ?>
                 <?php endwhile; ?>
 
@@ -123,7 +122,6 @@ get_header(); ?>
 
 <?php endif; ?>
             </div><!-- /.portfolio-wrapper -->
-    </div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
                 </div><!-- /.row-->
         </div><!-- /.container -->
 </div><!-- close .main-content -->

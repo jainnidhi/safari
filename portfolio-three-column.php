@@ -33,7 +33,7 @@ get_header(); ?>
 <div class="main-content clearfix">
 	<div class="container">
 		<div class="row">
-            <div id="content" class=" portfolio-page">
+            <div id="content" class="portfolio-page">
                 <ul id="filters">
                         <?php
                             $terms = get_terms('portfolio_category');
@@ -101,7 +101,9 @@ get_header(); ?>
                       
                        
           
-                </div><!--end .product-->
+                </div><!--end .portfolio-post -->
+            </div> <!-- .portfolio-wrapper -->
+                
                     <?php $i+=1; ?>
                 <?php endwhile; ?>
 
@@ -122,9 +124,8 @@ get_header(); ?>
                 <?php get_search_form(); ?>
 
 <?php endif; ?>
-            </div><!-- /.portfolio-wrapper -->
-    </div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
-                </div><!-- /.row-->
+            </div><!-- /.portfolio-page -->
+    </div><!-- close .row  -->
         </div><!-- /.container -->
 </div><!-- close .main-content -->
 

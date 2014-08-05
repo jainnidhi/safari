@@ -24,7 +24,7 @@
                                 // If there's one or more one active sidebars, create a row and add them
                                 if ($footerSidebars > 0) {
                                     ?>
-                                    <footer class="site-footer" role="contentinfo">
+                                   
                                         <?php
                                         // Work out the container class name based on the number of active footer sidebars
                                         $containerClass = "col-sm-" . 12 / $footerSidebars;
