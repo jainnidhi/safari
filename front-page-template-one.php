@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Template Name: Front Page One
  * Description: Displays a full-width front page. The front page template provides an optional
  * featured section that allows for highlighting a key message. It can contain up to 2 widget areas,
  * in one or two columns. These widget areas are dynamic so if only one widget is used, it will be
@@ -217,30 +217,7 @@ get_header();
         </ul>
       </div>
 </section><!-- /.slider-wrapper -->
-
-     <!-- Start business-tagline area -->
-        <section class="business-tagline-area">
-            <div class="container">
-                <div class="row">
-                    <div class="business-tagline col-sm-12">
-                        <?php if ( get_theme_mod('tagline_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('tagline_title')); ?></h3>
-
-                          <?php } else {  ?> <h3><?php esc_html_e('Welcome to Safari', 'safari') ?></h3>
-                                   <?php } ?>
-
-                          <?php if ( get_theme_mod('tagline_description') !='' ) {  ?>
-                          <p><?php echo esc_html(get_theme_mod('tagline_description')); ?></p>
-                                   <?php } else { ?>
-                                  <p><?php esc_html_e('Creating your Restaurant & Food based website with Safari is completely easy.
-                                      You just need to perform few tweaks in the theme option panel and your website will be ready to use.
-                                      Showcase all important features of your website on homepage.', 'safari') ?> </p>
-                                                   <?php } ?>
-                    </div>
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- end business tagline area -->
-        <!-- Start home featured area -->
-        
+       
     <section class="home-featured-area">
         <div class="container">
                 <div class="row">
@@ -352,77 +329,7 @@ get_header();
      
      <?php get_template_part('content','frontportfolio'); ?>
      
-     
-     <section class="home-counter-area">
-        <div class="container">
-                <div class="row">
-            <div class="home-counter col-sm-12">
-                <div class="home-counter-one col-sm-3">
-                    <div class="counter">
-                           <?php if ( get_theme_mod('counter_title_one') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_one')); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('568', 'safari') ?></h3>
-                           <?php } ?>
-
-                  <?php if ( get_theme_mod('counter_description_one') !='' ) {  ?>
-                  <p><?php echo esc_html(get_theme_mod('counter_description_one')); ?></p>
-                           <?php } else { ?>
-                          <p><?php esc_html_e('Clients', 'safari') ?> </p>
-                                           <?php } ?>
-                    </div>
-                </div>
-
-                <div class="home-counter-two col-sm-3">
-                    <div class="counter">
-                           <?php if ( get_theme_mod('counter_title_two') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_two')); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('862', 'safari') ?></h3>
-                           <?php } ?>
-
-                  <?php if ( get_theme_mod('counter_description_two') !='' ) {  ?>
-                  <p><?php echo esc_html(get_theme_mod('counter_description_two')); ?></p>
-                           <?php } else { ?>
-                          <p><?php esc_html_e('Projects', 'safari') ?> </p>
-                                           <?php } ?>
-                    </div>
-                </div>
-
-
-                <div class="home-counter-three col-sm-3">
-                  <div class="counter">
-                           <?php if ( get_theme_mod('counter_title_three') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_three')); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('243', 'safari') ?></h3>
-                           <?php } ?>
-
-                  <?php if ( get_theme_mod('counter_description_three') !='' ) {  ?>
-                  <p><?php echo esc_html(get_theme_mod('counter_description_three')); ?></p>
-                           <?php } else { ?>
-                          <p><?php esc_html_e('Posts', 'safari') ?> </p>
-                                           <?php } ?>
-                  </div>
-                </div>
-                
-                <div class="home-counter-four col-sm-3">
-                    <div class="counter">
-                           <?php if ( get_theme_mod('counter_title_four') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('counter_title_four')); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('243', 'safari') ?></h3>
-                           <?php } ?>
-
-                  <?php if ( get_theme_mod('counter_description_four') !='' ) {  ?>
-                  <p><?php echo esc_html(get_theme_mod('counter_description_four')); ?></p>
-                           <?php } else { ?>
-                          <p><?php esc_html_e('Templates', 'safari') ?> </p>
-                                           <?php } ?>
-                    </div>
-                </div>
-            </div>
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-     </section><!-- end home featured area -->
-     
- 
-        
-        <?php
-            get_template_part('content', 'frontteam'); ?>
-     
+  
      <!-- Home testimonial slider starts here --> 
  <section class="testimonial-area">
    <div class="container">
@@ -604,12 +511,6 @@ get_header();
    </div><!-- /.container -->
  </section><!-- /.testimonial-area -->
 
-     <?php
-            // Display featured posts on front page
-            get_template_part('content', 'frontposts'); ?>
-       
-        
-      
          <span class="top"><a class="back-to-top"><i class="fa fa-arrow-up"></i></a></span>
             
   

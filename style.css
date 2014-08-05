@@ -423,6 +423,10 @@ object {
     padding: 0 0 85px; 
 }
 
+.page-template-front-page-php .home-featured{
+    padding:85px 0;
+}
+
 .home-featured:after{
     content:".";
     display:block;
