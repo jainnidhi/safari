@@ -80,7 +80,7 @@ get_header();
           // load first slide
           if ( get_theme_mod('slider_one') !='' ) {  ?>
                     <li id="slider1" class="home-slider"> 
-                        <img href="<?php if ( get_theme_mod('slider_one_url') !='' ) { echo esc_url(get_theme_mod('slider_one_url')); } ?>" src="<?php echo get_theme_mod('slider_one'); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_one_url') !='' ) { echo esc_url(get_theme_mod('slider_one_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_one')); ?>" alt=""/>
                         <?php if ( get_theme_mod('slider_title_one') !='' || get_theme_mod('slider_one_url') !='' || get_theme_mod('slider_one_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
@@ -106,7 +106,7 @@ get_header();
                      // load second slide
                      if ( get_theme_mod('slider_two') !='' ) {  ?>
                     <li id="slider2" class="home-slider"> 
-                        <img href="<?php if ( get_theme_mod('slider_two_url') !='' ) { echo esc_url(get_theme_mod('slider_two_url')); } ?>" src="<?php echo get_theme_mod('slider_two'); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_two_url') !='' ) { echo esc_url(get_theme_mod('slider_two_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_two')); ?>" alt=""/>
                        
                      <?php if ( get_theme_mod('slider_title_two') !='' || get_theme_mod('slider_two_url') !='' || get_theme_mod('slider_two_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -134,7 +134,7 @@ get_header();
                     // load third slide
                     if ( get_theme_mod('slider_three') !='' ) {  ?>
                     <li id="slider3" class="home-slider">  
-                        <img href="<?php if ( get_theme_mod('slider_three_url') !='' ) { echo esc_url(get_theme_mod('slider_three_url')); } ?>" src="<?php echo get_theme_mod('slider_three'); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_three_url') !='' ) { echo esc_url(get_theme_mod('slider_three_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_three')); ?>" alt=""/>
                        
                    <?php if ( get_theme_mod('slider_title_three') !='' || get_theme_mod('slider_three_url') !='' || get_theme_mod('slider_three_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -162,7 +162,7 @@ get_header();
                     // load fourth slide
                     if ( get_theme_mod('slider_four') !='' ) {  ?>
                     <li id="slider4" class="home-slider"> 
-                        <img href="<?php if ( get_theme_mod('slider_four_url') !='' ) { echo esc_url(get_theme_mod('slider_four_url')); } ?>" src="<?php echo get_theme_mod('slider_four'); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_four_url') !='' ) { echo esc_url(get_theme_mod('slider_four_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_four')); ?>" alt=""/>
                        
                     <?php if ( get_theme_mod('slider_title_four') !='' || get_theme_mod('slider_four_url') !='' || get_theme_mod('slider_four_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -190,7 +190,7 @@ get_header();
                     // load fifth slide
                     if ( get_theme_mod('slider_five') !='' ) {  ?>
                     <li id="slider5" class="home-slider">  
-                                <img href="<?php if ( get_theme_mod('slider_five_url') !='' ) { echo esc_url(get_theme_mod('slider_five_url')); } ?>" src="<?php echo get_theme_mod('slider_five'); ?>" alt=""/>
+                                <img href="<?php if ( get_theme_mod('slider_five_url') !='' ) { echo esc_url(get_theme_mod('slider_five_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_five')); ?>" alt=""/>
                          
                     <?php if ( get_theme_mod('slider_title_five') !='' || get_theme_mod('slider_five_url') !='' || get_theme_mod('slider_five_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -270,7 +270,7 @@ get_header();
                            <?php } ?></a>
                 </div>
 
-                <div class="home-featured-two  col-sm-3">
+                <div class="home-featured-two col-sm-3">
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_two'); ?></div>
                     <?php } else {  ?>

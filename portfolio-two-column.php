@@ -13,7 +13,7 @@ get_header(); ?>
 
 <div class="post-featured-image">
         <?php if ( get_theme_mod('portfolio_two_column_image')) { ?>
-		<img src="<?php echo get_theme_mod('portfolio_two_column_image'); ?>" />
+		<img src="<?php echo esc_url(get_theme_mod('portfolio_two_column_image')); ?>" />
 	<?php } else { ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/includes/images/slider1.jpg" alt=""/>
         <?php  } ?>
