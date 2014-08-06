@@ -14,7 +14,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri(); ?>/includes/images/slider1.jpg" alt=""/>
     <?php } ?>
     <div class="blog-content">
-        <?php if (get_theme_mod('single_portfolio_page_title') != '') { ?><h3><?php echo esc_html(get_theme_mod('single_portfolio_page_title')); ?></h3>
+        <?php if (get_theme_mod('single_portfolio_page_title') != '') { ?><h1><?php echo esc_html(get_theme_mod('single_portfolio_page_title')); ?></h1>
 
         <?php } else { ?> <h1><?php esc_html_e(' Single Portfolio', 'safari') ?></h1>
         <?php } ?>
@@ -64,35 +64,45 @@ get_header();
                 </div>
             </div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
             <div class="portfolio-related-products clearfix">
-                <?php
-                //Get array of terms
-                $terms = get_the_terms($post->ID, 'portfolio_category', 'string');
-             //Pluck out the IDs to get an array of IDS
-                $term_ids = wp_list_pluck($terms, 'term_id');
+                 <?php if (get_theme_mod('portfolio_related_title') != '') { ?><h3><?php echo esc_html(get_theme_mod('portfolio_related_title')); ?></h3>
+                    <?php } else { ?> <h3><?php esc_html_e(' Related Products', 'safari') ?></h3>
+                    <?php } ?>
 
-                    //Query posts with tax_query. Choose in 'IN' if want to query posts with any of the terms
-                    //Chose 'AND' if you want to query for posts with all terms
-                $related_portfolio_query = new WP_Query(array(
-                    'post_type' => 'portfolio',
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'portfolio_category',
-                            'field' => 'id',
-                            'terms' => $term_ids,
-                            'operator' => 'IN' //Or 'AND' or 'NOT IN'
-                        )),
-                    'posts_per_page' => 3,
-                    'ignore_sticky_posts' => 1,
-                    'orderby' => 'rand',
-                    'post__not_in' => array($post->ID)
-                        ));
+                    <?php if (get_theme_mod('portfolio_related_description') != '') { ?>
+                        <p><?php echo esc_html(get_theme_mod('portfolio_related_description')); ?></p>
+                    <?php } else { ?>
+                        <p><?php esc_html_e('This is the related portfolio description block.', 'safari') ?> </p>
+                    <?php } ?>
+            <div class="portfolio-related-products-wrap clearfix">
+                        <?php
+                        //Get array of terms
+                        $terms = get_the_terms($post->ID, 'portfolio_category', 'string');
+                     //Pluck out the IDs to get an array of IDS
+                        $term_ids = wp_list_pluck($terms, 'term_id');
 
-        //Loop through posts and display...
-                if ($related_portfolio_query->have_posts()) {
-                    while ($related_portfolio_query->have_posts()) : $related_portfolio_query->the_post();
-                        ?>
+                            //Query posts with tax_query. Choose in 'IN' if want to query posts with any of the terms
+                            //Chose 'AND' if you want to query for posts with all terms
+                        $related_portfolio_query = new WP_Query(array(
+                            'post_type' => 'portfolio',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'portfolio_category',
+                                    'field' => 'id',
+                                    'terms' => $term_ids,
+                                    'operator' => 'IN' //Or 'AND' or 'NOT IN'
+                                )),
+                            'posts_per_page' => 3,
+                            'ignore_sticky_posts' => 1,
+                            'orderby' => 'rand',
+                            'post__not_in' => array($post->ID)
+                                ));
+                        
+                    //Loop through posts and display...
+                    if ($related_portfolio_query->have_posts()) {
+                        while ($related_portfolio_query->have_posts()) : $related_portfolio_query->the_post();
+                            ?>
                         <div id="post-<?php the_ID(); ?>" class="single_related col-lg-3 related-portfolio">
-
+                            
                     <div class="portfolio-image">
                         <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail('post_feature_thumb'); ?>
@@ -115,7 +125,8 @@ get_header();
                     wp_reset_query();
                 }
                 ?>
-            </div>
+            </div><!-- /.portfolio-related-products-wrap -->
+            </div><!-- /.portfolio-related-products -->
         </div><!-- close .row -->
     </div><!-- close .container -->
 </div><!-- close .main-content -->

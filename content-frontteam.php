@@ -56,7 +56,7 @@ if (get_theme_mod('safari_front_team_members_check')) {
         ?>
                     
                   
-                        <div class="home-featured-team col-sm-4">
+                        <div class="home-featured-team col-sm-4" data-scroll-reveal="enter from the top after 0.2s">
 
                             <div class="featured-team-content clearfix">
 
@@ -147,7 +147,7 @@ if (get_theme_mod('safari_front_team_members_check')) {
             <div id="featured-team-members" class="clearfix">
                 <div class="members-wrap clearfix">
                
-                        <div class="home-featured-team col-sm-4" id="member-one">
+                        <div class="home-featured-team col-sm-4" id="member-one" data-scroll-reveal="enter from the left after 0.2s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team1.jpg" alt=""/>
@@ -174,7 +174,7 @@ if (get_theme_mod('safari_front_team_members_check')) {
                             
                         </div><!--end .home-featured-team-->
                         
-                        <div class="home-featured-team col-sm-4" id="member-two">
+                        <div class="home-featured-team col-sm-4" id="member-two" data-scroll-reveal="enter from the left after 0.2s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team2.jpg" alt=""/>
@@ -199,7 +199,7 @@ if (get_theme_mod('safari_front_team_members_check')) {
                             
                         </div><!--end .home-featured-team-->
                         
-                        <div class="home-featured-team col-sm-4" id="member-three">
+                        <div class="home-featured-team col-sm-4" id="member-three" data-scroll-reveal="enter from the right after 0.2s">
 
                             <div class="featured-team-content">
                                 <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/team3.jpg" alt=""/>

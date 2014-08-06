@@ -9,11 +9,19 @@
 
 get_header(); ?>
 
-	
+	<div class="main-content">
+	<div class="container">
+		<div class="row">
+			<div id="content" class="main-content-inner col-sm-12 col-md-8">
 
 		<?php do_action( 'woothemes_our_team', array(
-	'limit' 			=> 2,
+	'limit' 			=> 3,
 	'display_author' 	=> false )
 	); ?>
+                            
+                             </div>
+                </div>
+        </div>
+</div>
 
 <?php get_footer(); ?>

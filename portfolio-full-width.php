@@ -51,24 +51,24 @@ get_header(); ?>
                 </ul>
                  <div class="portfolio-wrapper">
 
-        <?php
-        $current_page = get_query_var('paged');
-        $per_page = intval(get_theme_mod('safari_portfolio_front_count'));
-        $offset = $current_page > 0 ? $per_page * ($current_page - 1) : 0;
-        $portfolio_args = array(
-            'post_type' => 'portfolio',
-            'posts_per_page' => $per_page,
-            'offset' => $offset
-        );
-        $products = new WP_Query($portfolio_args);
-        ?>
-        <?php if ($products->have_posts()) : $i = 1; ?>
-            <?php while ($products->have_posts()) : $products->the_post(); ?>
-                <?php 
-                    $terms = get_the_terms( $post->ID, 'portfolio_category' );	
-                    if ( $terms && ! is_wp_error( $terms ) ) : 
+                <?php
+                $current_page = get_query_var('paged');
+                $per_page = intval(get_theme_mod('safari_portfolio_front_count'));
+                $offset = $current_page > 0 ? $per_page * ($current_page - 1) : 0;
+                $portfolio_args = array(
+                    'post_type' => 'portfolio',
+                    'posts_per_page' => $per_page,
+                    'offset' => $offset
+                );
+                $products = new WP_Query($portfolio_args);
+                ?>
+                <?php if ($products->have_posts()) : $i = 1; ?>
+                    <?php while ($products->have_posts()) : $products->the_post(); ?>
+                        <?php 
+                            $terms = get_the_terms( $post->ID, 'portfolio_category' );	
+                            if ( $terms && ! is_wp_error( $terms ) ) : 
 
-                        $links = array();
+                                $links = array();
 
                         foreach ( $terms as $term ) {
                             $links[] = $term->name;
@@ -80,7 +80,7 @@ get_header(); ?>
                         $tax = '';					
                     endif; 
                      $containerClass = $tax; 
-?>
+                ?>
            
 
                 <div id="post-<?php the_ID(); ?>" class="col-lg-2 portfolio all mix<?php if ($i % 4 == 0) { echo ' last'; } ?> <?php echo $containerClass; ?>">

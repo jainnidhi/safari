@@ -59,7 +59,7 @@ get_header();
                 </li>
                 
                 <li>
-                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/slider2.jpg" alt=""/>
+                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/home-featured.jpg" alt=""/>
                 <div class="flex-caption">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'safari') ?></a></h2>
@@ -80,7 +80,7 @@ get_header();
           // load first slide
           if ( get_theme_mod('slider_one') !='' ) {  ?>
                     <li id="slider1" class="home-slider"> 
-                        <img href="<?php if ( get_theme_mod('slider_one_url') !='' ) { echo esc_url(get_theme_mod('slider_one_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_one')); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_one_url') !='' ) { echo esc_url(get_theme_mod('slider_one_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_one')); ?>" alt="first-slider-image"/>
                         <?php if ( get_theme_mod('slider_title_one') !='' || get_theme_mod('slider_one_url') !='' || get_theme_mod('slider_one_description') !='' ) {  ?>
                         <div class="flex-caption">
                             <div class="slider-text-container">
@@ -106,7 +106,7 @@ get_header();
                      // load second slide
                      if ( get_theme_mod('slider_two') !='' ) {  ?>
                     <li id="slider2" class="home-slider"> 
-                        <img href="<?php if ( get_theme_mod('slider_two_url') !='' ) { echo esc_url(get_theme_mod('slider_two_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_two')); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_two_url') !='' ) { echo esc_url(get_theme_mod('slider_two_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_two')); ?>" alt="second-slider-image"/>
                        
                      <?php if ( get_theme_mod('slider_title_two') !='' || get_theme_mod('slider_two_url') !='' || get_theme_mod('slider_two_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -134,7 +134,7 @@ get_header();
                     // load third slide
                     if ( get_theme_mod('slider_three') !='' ) {  ?>
                     <li id="slider3" class="home-slider">  
-                        <img href="<?php if ( get_theme_mod('slider_three_url') !='' ) { echo esc_url(get_theme_mod('slider_three_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_three')); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_three_url') !='' ) { echo esc_url(get_theme_mod('slider_three_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_three')); ?>" alt="third-slider-image"/>
                        
                    <?php if ( get_theme_mod('slider_title_three') !='' || get_theme_mod('slider_three_url') !='' || get_theme_mod('slider_three_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -162,7 +162,7 @@ get_header();
                     // load fourth slide
                     if ( get_theme_mod('slider_four') !='' ) {  ?>
                     <li id="slider4" class="home-slider"> 
-                        <img href="<?php if ( get_theme_mod('slider_four_url') !='' ) { echo esc_url(get_theme_mod('slider_four_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_four')); ?>" alt=""/>
+                        <img href="<?php if ( get_theme_mod('slider_four_url') !='' ) { echo esc_url(get_theme_mod('slider_four_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_four')); ?>" alt="fourth-slider-image"/>
                        
                     <?php if ( get_theme_mod('slider_title_four') !='' || get_theme_mod('slider_four_url') !='' || get_theme_mod('slider_four_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -190,7 +190,7 @@ get_header();
                     // load fifth slide
                     if ( get_theme_mod('slider_five') !='' ) {  ?>
                     <li id="slider5" class="home-slider">  
-                                <img href="<?php if ( get_theme_mod('slider_five_url') !='' ) { echo esc_url(get_theme_mod('slider_five_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_five')); ?>" alt=""/>
+                                <img href="<?php if ( get_theme_mod('slider_five_url') !='' ) { echo esc_url(get_theme_mod('slider_five_url')); } ?>" src="<?php echo esc_url(get_theme_mod('slider_five')); ?>" alt="fifth-slider-image"/>
                          
                     <?php if ( get_theme_mod('slider_title_five') !='' || get_theme_mod('slider_five_url') !='' || get_theme_mod('slider_five_description') !='' ) {  ?>
                         <div class="flex-caption">
@@ -222,7 +222,7 @@ get_header();
         <div class="container">
                 <div class="row">
             <div class="home-featured col-sm-12">
-                <div class="home-featured-one col-sm-3">
+                <div class="home-featured-one col-sm-3" data-scroll-reveal="enter from the top after 0.2s">
                     <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
                      <div class="featured-image"><?php echo esc_url(get_theme_mod('home_featured_one')); ?></div>
                     <?php } else {  ?>
@@ -247,7 +247,7 @@ get_header();
                            <?php } ?></a>
                 </div>
 
-                <div class="home-featured-two  col-sm-3">
+                <div class="home-featured-two  col-sm-3" data-scroll-reveal="enter from the top after 0.2s">
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
                      <div class="featured-image"><?php echo esc_url(get_theme_mod('home_featured_two')); ?></div>
                     <?php } else {  ?>
@@ -262,7 +262,7 @@ get_header();
                   <?php if ( get_theme_mod('home_description_two') !='' ) {  ?>
                   <p><?php echo esc_html(get_theme_mod('home_description_two')); ?></p>
                            <?php } else { ?>
-                          <p><?php esc_html_e('Show your multiple services that will explore your website among the audience.', 'safari') ?> </p>
+                          <p><?php esc_html_e('Show your multiple services that will explore your website among audience.', 'safari') ?> </p>
                                            <?php } ?>
 
                       <a class="read-more" href="<?php if ( get_theme_mod('home_two_link_url') !='' ) { echo esc_url(get_theme_mod('home_two_link_url')); } ?>">
@@ -273,7 +273,7 @@ get_header();
                 </div>
 
 
-                <div class="home-featured-three col-sm-3">
+                <div class="home-featured-three col-sm-3" data-scroll-reveal="enter from the top after 0.2s">
                     <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
                      <div class="featured-image"><?php echo esc_url(get_theme_mod('home_featured_three')); ?></div>
                     <?php } else {  ?>
@@ -298,7 +298,7 @@ get_header();
                            <?php } ?></a>
                 </div>
                 
-                <div class="home-featured-four col-sm-3">
+                <div class="home-featured-four col-sm-3" data-scroll-reveal="enter from the top after 0.2s">
                     <?php if ( get_theme_mod('home_featured_four') !='' ) {  ?>
                      <div class="featured-image"><?php echo esc_url(get_theme_mod('home_featured_four')); ?></div>
                     <?php } else {  ?>
@@ -334,7 +334,7 @@ get_header();
  <section class="testimonial-area">
    <div class="container">
     <div class="row"> 
-        <div class="home-testimonial-title-area" id="post-title">
+        <div class="home-testimonial-title-area">
             <div class="home-testimonial-title section-title">
                  <?php if ( get_theme_mod('safari_testimonial_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('safari_testimonial_title')); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Testimonial', 'safari') ?></h3>

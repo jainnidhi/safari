@@ -173,7 +173,7 @@ function safari_scripts() {
     wp_enqueue_script('safari-slider', get_template_directory_uri() . '/includes/js/jquery.flexslider-min.js', array('jquery'));
     wp_enqueue_script('mixitup', get_template_directory_uri() . '/includes/js/jquery.mixitup.js', array('jquery'));
     wp_enqueue_script('safari-custom-scripts', get_template_directory_uri() . '/includes/js/custom-scripts.js', array(), '1.0', 'all', false);
-
+    wp_enqueue_script('ethic-scroll-reveal', get_template_directory_uri() . '/includes/js/scrollReveal.min.js', array('jquery'));
     //wp_enqueue_script('menu-dropdown', get_template_directory_uri() . '/includes/js/bootstrap-hover-dropdown.js', array(), '2.0.10', 'all', false);
 }
 
@@ -235,6 +235,21 @@ require get_template_directory() . '/includes/jetpack.php';
  * Load custom WordPress nav walker.
  */
 require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
+
+function safari_scroll_reveal_js() { 
+    if(is_front_page()) { ?>
+    <script type="text/javascript">
+        /* Trigger home page slider */
+        /* Slider powered by FlexSlider by WooThemes */
+        jQuery(function() {
+
+        window.scrollReveal = new scrollReveal({ reset: false, move: '50px' });
+      });
+    </script>
+<?php }
+}
+add_action('wp_footer','safari_scroll_reveal_js');
+
 
 function safari_custom_post_category() {
 ?>
