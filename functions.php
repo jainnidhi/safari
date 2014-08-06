@@ -250,7 +250,7 @@ function safari_custom_post_category() {
             }
 
             // We successfully got a link. Print it out.
-            echo '<a href="' . esc_url($term_link) . '">' . $term->name . '</a>';
+            echo '<a href="' . esc_url($term_link) . '">' . $term->name . ' '. '</a>';
            
         }
 

@@ -423,7 +423,7 @@ object {
     padding: 0 0 85px; 
 }
 
-.page-template-front-page-php .home-featured{
+.page-template-front-page-template-one-php .home-featured{
     padding:85px 0;
 }
 
@@ -991,7 +991,7 @@ object {
     height:100%;
     top:0;
     background:rgba(92,200,197,0.8);
-    padding:150px 10px;;
+    padding:50px 10px;;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -khtml-transition: all 0.3s ease;
@@ -1032,6 +1032,22 @@ object {
     padding-top:40px !important;
 }
 
+.portfolio-sidebar li{
+    border-bottom:0 !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 10px !important;
+}
+
+.portfolio-sidebar li:before{
+    content: "\f105";
+    font-family: "FontAwesome";
+    margin-right: 15px;
+    color:#5cc8c5;
+}
+
+.portfolio-sidebar .widget-title{
+    margin-bottom:40px;
+}
 .portfolio-related-products{
     clear: both;
     padding: 100px 0 0;

@@ -49,6 +49,7 @@ get_header(); ?>
                             }
                         ?>
                 </ul>
+                 <div class="portfolio-wrapper">
 
         <?php
         $current_page = get_query_var('paged');
@@ -80,7 +81,7 @@ get_header(); ?>
                     endif; 
                      $containerClass = $tax; 
 ?>
-            <div class="portfolio-wrapper">
+           
 
                 <div id="post-<?php the_ID(); ?>" class="col-lg-2 portfolio all mix<?php if ($i % 4 == 0) { echo ' last'; } ?> <?php echo $containerClass; ?>">
 
@@ -102,7 +103,7 @@ get_header(); ?>
                        
           
                 </div><!--end .portfolio-post -->
-            </div> <!-- end .portfolio-wrapper --> 
+            
                     <?php $i+=1; ?>
                 <?php endwhile; ?>
 
@@ -123,7 +124,8 @@ get_header(); ?>
                 <?php get_search_form(); ?>
 
 <?php endif; ?>
-            </div><!-- /.portfolio-wrapper -->
+                </div> <!-- end .portfolio-wrapper --> 
+            </div><!-- /.portfolio-page -->
 </div><!-- close .main-content -->
 
 <?php get_footer(); ?>
