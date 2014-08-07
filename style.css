@@ -69,6 +69,7 @@ a{
 p{
     color:#686868;
     line-height:1.7;
+    font-size:13px;
 }
 
 a:hover{
@@ -1352,6 +1353,27 @@ object {
 
 .sidebar .widget{
     margin-bottom:50px;
+}
+
+/* Column Template */
+
+.columns{
+    padding-bottom:70px;
+}
+
+.six-column-block{
+    padding-bottom:0;
+}
+
+.columns h3{
+    font-size:20px;
+    margin-top:0;
+    margin-bottom:25px;
+}
+
+/* Service Template */
+.page-template-services-php .home-featured{
+    padding-bottom:0;
 }
 
 
