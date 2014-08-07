@@ -53,12 +53,12 @@ get_header();
                     <?php endwhile; // end of the loop. ?>
                 </div>
                 <div class="portfolio-sidebar sidebar col-lg-4">
-                    <aside id="recent-posts-2" class="widget widget_recent_entries">
-                        <h3 class="widget-title">Project Details</h3>		
+                    <aside class="project-details">
+                        <h3 class="project-title">Project Details</h3>		
                         <ul>
-                            <li>Client: <a href="#">Toppers of Hackney</a></li>
-                            <li>Date: <a href="#"><?php the_time(esc_html('j F Y','safari')); ?></a></li>
-                            <li>Skills: <a href="#"><?php safari_custom_post_category(); ?></a></li>
+                            <li>Client: Toppers of Hackney</li>
+                            <li>Date: <?php the_time(esc_html('j F Y','safari')); ?></li>
+                            <li>Skills: <?php safari_custom_post_category(); ?></li>
                         </ul>
                     </aside>
                 </div>

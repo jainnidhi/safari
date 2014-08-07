@@ -99,12 +99,12 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                
                             </div> <!--end .featured-post-content -->
 
-                            <span>  
+                            <div class="portfolio-inner">  
                                 <h4 class="home-featured-portfolio-title">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a>
                                 </h4>
                                  <?php safari_custom_post_category(); ?>
-                           </span>
+                           </div><!-- /.portfolio-inner -->
                             </div><!--end .home-featured-portfolio-->
                    
                         <?php $i+=1; ?>
@@ -149,12 +149,10 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
-
-                            <a href="#">
-
-                                <h4 class="home-featured-portfolio-title">Portfolio #1</h4>
-
-                            </a>
+                            
+                            <div class="portfolio-inner">
+                                <h4 class="home-featured-portfolio-title"><a href="#">Portfolio #1</a></h4>
+                            </div>
                            
                         </div><!--end .home-featured-portfolio-->
                         
@@ -168,12 +166,9 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
-
-                            <a href="#">
-
-                                <h4 class="home-featured-portfolio-title">Portfolio #2</h4>
-
-                            </a>
+                            <div class="portfolio-inner">
+                                <h4 class="home-featured-portfolio-title"><a href="#">Portfolio #2</a></h4>
+                            </div>
                            
                         </div><!--end .home-featured-portfolio-->
                         
@@ -187,12 +182,9 @@ if (get_theme_mod('safari_front_featured_portfolio_check')) {
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
-
-                            <a href="#">
-
-                                <h4 class="home-featured-portfolio-title">Portfolio #3</h4>
-
-                            </a>
+                            <div class="portfolio-inner">
+                                <h4 class="home-featured-portfolio-title"><a href="#">Portfolio #3</a></h4>
+                            </div>
                            
                         </div><!--end .home-featured-portfolio-->
                    

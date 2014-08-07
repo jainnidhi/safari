@@ -59,7 +59,7 @@ get_header();
                 </li>
                 
                 <li>
-                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/home-featured.jpg" alt=""/>
+                <img  src="<?php echo get_template_directory_uri(); ?>/includes/images/home-featured.jpg" alt="third-slider-image"/>
                 <div class="flex-caption">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'safari') ?></a></h2>

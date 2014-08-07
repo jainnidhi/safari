@@ -883,7 +883,7 @@ object {
     display:inline-block;
 }
 
-.home-featured-portfolio:hover span{
+.home-featured-portfolio:hover .portfolio-inner{
     opacity:1;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -891,7 +891,7 @@ object {
     -moz-transitiokn: all 0.3s ease;
 }
 
-.home-featured-portfolio span {
+.home-featured-portfolio .portfolio-inner {
     display: block;
     position: absolute;
     text-align: center;
@@ -908,8 +908,8 @@ object {
     -moz-transitiokn: all 0.3s ease;
 }
 
-.home-featured-portfolio span h4,
-.home-featured-portfolio span a{
+.home-featured-portfolio .portfolio-inner h4,
+.home-featured-portfolio .portfolio-inner a{
     color:#fff;
 }
 
@@ -1068,8 +1068,8 @@ object {
 /* Main Content */
 
 .main-content{
-    margin-top:95px;
-    padding:85px 0;
+    margin-top:93px;
+    padding:93px 0;
 }
 
 .blog .main-content,
